@@ -2,16 +2,21 @@ clear all;
 mdl_puma560;
 robot = p560.nofriction();
 
-% Condições iniciais
-tempo = 10;
-q0 = qs;
-qd0 = qz;
-q0(3) = q0(3)+5*pi/180;
+%% 1.3 - Simulação em malha aberta
+% Com torque pra compensar a gravidade
 
-%t = (0:.056:5)';
-%q_dmd = jtraj(qz, qr, t);
-%qt = [t, q_dmd];
 tau = robot.rne(qs, qz, qz);
+tempo = 5;
 torqFun = @(r, t, q, qd)tau;
-[t, q, qd] = robot.fdyn(tempo, torqFun, q0, qd0);
-plot(t, q);
+qd0 = qz;
+
+qs2 = qs;
+qs2(3) = qs2(3) + 0.05;
+for q0 = [qz; qr; qs; qs2]'
+	[t, q, qd] = robot.fdyn(tempo, torqFun, q0, qd0);
+	plot(t, q);
+	title(['q0 = ', mat2str(q0)]);
+	legend('q_1', 'q_2', 'q_3', 'q_4', 'q_5', 'q_6');
+	xlabel('Tempo (s)');
+	snapnow;
+end
