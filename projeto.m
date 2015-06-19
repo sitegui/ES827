@@ -14,9 +14,49 @@ qs2 = qs;
 qs2(3) = qs2(3) + 0.05;
 for q0 = [qz; qr; qs; qs2]'
 	[t, q, qd] = robot.fdyn(tempo, torqFun, q0, qd0);
-	plot(t, q);
+	plot(t, wrapToPi(q));
 	title(['q0 = ', mat2str(q0)]);
 	legend('q_1', 'q_2', 'q_3', 'q_4', 'q_5', 'q_6');
 	xlabel('Tempo (s)');
+	snapnow;
+end
+
+%% 1.4.a - Simulação livre com atrito viscoso
+tempo = 30;
+for q0 = [qz; 0, 1e-6, 0, 0, 0, 0]'
+	[t, q, qd] = robot.fdyn(tempo, qz, q0, qd0);
+	K = zeros(size(q, 1));
+	for i = 1:size(q, 1)
+		M = robot.inertia(q(i, :));
+		K(i) = 1/2*qd(i, :)*M*qd(i, :)';
+	end
+	plot(t, wrapToPi(q));
+	title(['q0 = ', mat2str(q0)]);
+	legend('q_1', 'q_2', 'q_3', 'q_4', 'q_5', 'q_6');
+	xlabel('Tempo (s)');
+	snapnow;
+	
+	plot(t, K);
+	snapnow;
+end
+
+%% 1.4.b - Simulação livre com atrito viscoso
+tempo = 30;
+robot2 = robot.nofriction('all');
+
+for q0 = [qz; 0, 1e-6, 0, 0, 0, 0]'
+	[t, q, qd] = robot2.fdyn(tempo, qz, q0, qd0);
+	K = zeros(size(q, 1));
+	for i = 1:size(q, 1)
+		M = robot2.inertia(q(i, :));
+		K(i) = 1/2*qd(i, :)*M*qd(i, :)';
+	end
+	plot(t, wrapToPi(q));
+	title(['q0 = ', mat2str(q0)]);
+	legend('q_1', 'q_2', 'q_3', 'q_4', 'q_5', 'q_6');
+	xlabel('Tempo (s)');
+	snapnow;
+	
+	plot(t, K);
 	snapnow;
 end
