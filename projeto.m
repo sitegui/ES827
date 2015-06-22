@@ -60,3 +60,15 @@ for q0 = [qz; 0, 1e-6, 0, 0, 0, 0]'
 	plot(t, K);
 	snapnow;
 end
+
+%% 1.5 - Simulação de controlador PD
+Kp = diag([50, 50, 50, 50, 50, 60]);
+Kd = diag([20, 20, 20, 20, 20, 22]);
+tempo = 5;
+qRef = qs;
+robot.gravity = [0; 0; 0];
+torqFun = @(r, t, q, qd) (qRef-q)*Kp-qd*Kd;
+q0 = qz;
+
+[t, q] = robot.fdyn(tempo, torqFun, q0, qd0);
+plot(t, q);
