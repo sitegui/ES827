@@ -62,21 +62,9 @@ end
 Kp = diag([50, 50, 50, 50, 50, 60]);
 Kd = diag([20, 20, 20, 20, 20, 22]);
 tempo = 5;
-robot.gravity = [0; 0; 0];
-global taus tempos
-
-tempos = [];
-taus = [];
-q0 = qz;
-qRef = [pi/2, 0, -pi/2, pi, pi/2, -pi];
-[t, q] = robot.fdyn(tempo, @torqFun1_5, q0, qd0, qRef, Kp, Kd);
-plotAngles(t, q);
-title(['q^* = ', mat2str(qRef, 3)]);
-legend('q_1', 'q_2', 'q_3', 'q_4', 'q_5', 'q_6');
-snapnow;
-
-plot(tempos, taus);
-title(['q^* = ', mat2str(qRef, 3)]);
-legend('\tau_1', '\tau_2', '\tau_3', '\tau_4', '\tau_5', '\tau_6');
-xlabel('Tempo (s)');
-snapnow;
+robot1_5 = robot;
+robot1_5.gravity = [0; 0; 0];
+run1_5 = @(q0, qRef)simulacao1_5(robot1_5, tempo, q0, qz, qRef, Kp, Kd);
+run1_5([0,    0,     0, 0, 0, 0], [pi/2,  0, -pi/2,  pi,  pi/2, -pi]);
+run1_5([0,   pi, -pi/2, 0, 0, 0],   [pi,  0,     0,  pi, -pi/2, 0]);
+run1_5([0, pi/2, -pi/2, 0, 0, 0],  [-pi, pi,   -pi, -pi, -pi/2, pi]);
