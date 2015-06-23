@@ -1,7 +1,7 @@
 function plotAngles(t, q, plotTitle)
 	q = mod(q+2*pi, 4*pi)-2*pi;
-	q(q>3*pi/2) = q(q>3*pi/2)-2*pi;
-	q(q<-3*pi/2) = q(q<-3*pi/2)+2*pi;
+	q(q>3.5*pi/2) = q(q>3.5*pi/2)-2*pi;
+	q(q<-3.5*pi/2) = q(q<-3.5*pi/2)+2*pi;
 	plot(t, q);
 	xlabel('Tempo (s)');
 	set(gca, 'ytick', -3*pi/2:pi/2:3*pi/2);

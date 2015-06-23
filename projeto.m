@@ -38,6 +38,9 @@ simulacao1_3([0, pi/2+0.05, -pi/2, 0, 0, 0]);
 		snapnow;
 
 		plot(t, K);
+		title('Energia cinética');
+		xlabel('Tempo (s)');
+		ylabel('Energia (J)');
 		snapnow;
 	end
 
@@ -65,10 +68,11 @@ simulacao1_4(robot_no_friction, [0, 1e-6, 0, 0, 0, 0]);
 		legend('\tau_1', '\tau_2', '\tau_3', '\tau_4', '\tau_5', '\tau_6');
 		xlabel('Tempo (s)');
 		ylim([-50, 50]);
+		xlim([0, 2.5]);
 		snapnow;
 
 		function [tau] = torqFun1_5(~, t, q, qd)
-			tau = (qRef-q)*Kp-qd*Kd;
+			tau = -(q-qRef)*Kp-qd*Kd;
 			tempos = [tempos t];
 			taus = [taus; tau];
 		end
