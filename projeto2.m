@@ -11,18 +11,12 @@ points = [r*cos(angle), r*sin(angle), z*ones(n, 1)];
 T = transl(points);
 q = robot.ikine(T);
 
-figure;
-set(gcf, 'Renderer', 'zbuffer');
-robot.plot(q(1,:));
-hold('on');
-frame = getframe(gcf);
-[im, map] = rgb2ind(frame.cdata, 256, 'nodither');
-for k = 1:size(q,1)
-	robot.plot(q(k, :));
-	plot2(points(k, :), 'r.');
-	frame = getframe(gcf);
-	im(:,:,1,k) = rgb2ind(frame.cdata, map, 'nodither');
-end
-imwrite(im, map, 'gui.gif', 'DelayTime', 0, 'LoopCount', inf);
+	function plotFrame(n)
+		robot.plot(q(n, :));
+		hold('on');
+		plot2(points(n, :), 'r.');
+	end
+
+plot2gif(size(q, 1), @plotFrame, '2.1.gif');
 
 end
