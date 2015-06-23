@@ -29,7 +29,7 @@ simulacao1_3([0, pi/2+0.05, -pi/2, 0, 0, 0]);
 	function simulacao1_4(robot, q0)
 		tempo = 30;
 		[t, q, qd] = robot.fdyn(tempo, 0, q0, qz);
-		K = zeros(size(q, 1));
+		K = zeros(1, size(q, 1));
 		for i = 1:size(q, 1)
 			M = robot.inertia(q(i, :));
 			K(i) = 1/2*qd(i, :)*M*qd(i, :)';
