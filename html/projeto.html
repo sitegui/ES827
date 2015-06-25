@@ -1,0 +1,228 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>projeto</title><meta name="generator" content="MATLAB 8.0"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2015-06-23"><meta name="DC.source" content="projeto.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, tt, code { font-size:12px; }
+pre { margin:0px 0px 20px; }
+pre.error { color:red; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#3">1.3 - Simula&ccedil;&atilde;o em malha aberta</a></li><li><a href="#4">1.4.a - Simula&ccedil;&atilde;o livre com atrito viscoso</a></li><li><a href="#5">1.4.b - Simula&ccedil;&atilde;o livre com atrito viscoso</a></li><li><a href="#6">1.5 - Simula&ccedil;&atilde;o de controlador PD</a></li></ul></div><pre class="codeinput"><span class="keyword">function</span> projeto(p560)
+</pre><pre class="codeinput">qz = [0 0 0 0 0 0]; <span class="comment">% zero angles, L shaped pose</span>
+qr = [0 pi/2 -pi/2 0 0 0]; <span class="comment">% ready pose, arm up</span>
+qs = [0 0 -pi/2 0 0 0];
+robot = p560.nofriction();
+robot_no_friction = p560.nofriction(<span class="string">'all'</span>);
+robot_no_gravity = SerialLink(robot);
+robot_no_gravity.gravity = [0; 0; 0];
+</pre><h2>1.3 - Simula&ccedil;&atilde;o em malha aberta<a name="3"></a></h2><p>Com torque pra compensar a gravidade</p><pre class="codeinput">	<span class="keyword">function</span> simulacao1_3(q0)
+		tempo = 5;
+		tau = robot.rne([0, pi/2, -pi/2, 0, 0, 0], qz, qz);
+		torqFun = @(r, t, q, qd)tau;
+		[t, q] = robot.fdyn(tempo, torqFun, q0, qz);
+		plotAngles(t, q, [<span class="string">'q0 = '</span>, mat2str(q0, 3)]);
+		snapnow;
+	<span class="keyword">end</span>
+
+simulacao1_3([0,         0,     0, 0, 0, 0]);
+simulacao1_3([0,        pi, -pi/2, 0, 0, 0]);
+simulacao1_3([0,      pi/2, -pi/2, 0, 0, 0]);
+simulacao1_3([0, pi/2+0.05, -pi/2, 0, 0, 0]);
+</pre><img vspace="5" hspace="5" src="projeto_01.png" alt=""> <img vspace="5" hspace="5" src="projeto_02.png" alt=""> <img vspace="5" hspace="5" src="projeto_03.png" alt=""> <img vspace="5" hspace="5" src="projeto_04.png" alt=""> <h2>1.4.a - Simula&ccedil;&atilde;o livre com atrito viscoso<a name="4"></a></h2><pre class="codeinput">	<span class="keyword">function</span> simulacao1_4(robot, q0)
+		tempo = 30;
+		[t, q, qd] = robot.fdyn(tempo, 0, q0, qz);
+		K = zeros(1, size(q, 1));
+		<span class="keyword">for</span> i = 1:size(q, 1)
+			M = robot.inertia(q(i, :));
+			K(i) = 1/2*qd(i, :)*M*qd(i, :)';
+		<span class="keyword">end</span>
+		plotAngles(t, q, [<span class="string">'q0 = '</span>, mat2str(q0, 3)]);
+		snapnow;
+
+		plot(t, K);
+		title(<span class="string">'Energia cin&eacute;tica'</span>);
+		xlabel(<span class="string">'Tempo (s)'</span>);
+		ylabel(<span class="string">'Energia (J)'</span>);
+		snapnow;
+	<span class="keyword">end</span>
+
+simulacao1_4(robot, [0,    0, 0, 0, 0, 0]);
+simulacao1_4(robot, [0, 1e-6, 0, 0, 0, 0]);
+</pre><img vspace="5" hspace="5" src="projeto_05.png" alt=""> <img vspace="5" hspace="5" src="projeto_06.png" alt=""> <img vspace="5" hspace="5" src="projeto_07.png" alt=""> <img vspace="5" hspace="5" src="projeto_08.png" alt=""> <h2>1.4.b - Simula&ccedil;&atilde;o livre com atrito viscoso<a name="5"></a></h2><pre class="codeinput">simulacao1_4(robot_no_friction, [0,    0, 0, 0, 0, 0]);
+simulacao1_4(robot_no_friction, [0, 1e-6, 0, 0, 0, 0]);
+</pre><img vspace="5" hspace="5" src="projeto_09.png" alt=""> <img vspace="5" hspace="5" src="projeto_10.png" alt=""> <img vspace="5" hspace="5" src="projeto_11.png" alt=""> <img vspace="5" hspace="5" src="projeto_12.png" alt=""> <h2>1.5 - Simula&ccedil;&atilde;o de controlador PD<a name="6"></a></h2><pre class="codeinput">	<span class="keyword">function</span> simulacao1_5(q0, qRef)
+		Kp = diag([50, 50, 50, 50, 50, 60]);
+		Kd = diag([20, 20, 20, 20, 20, 22]);
+		tempo = 5;
+		tempos = [];
+		taus = [];
+		[t, q] = robot_no_gravity.fdyn(tempo, @torqFun1_5, q0);
+		plotAngles(t, q, [<span class="string">'q^* = '</span>, mat2str(qRef, 3)]);
+		snapnow;
+
+		plot(tempos, taus);
+		title([<span class="string">'q^* = '</span>, mat2str(qRef, 3)]);
+		legend(<span class="string">'\tau_1'</span>, <span class="string">'\tau_2'</span>, <span class="string">'\tau_3'</span>, <span class="string">'\tau_4'</span>, <span class="string">'\tau_5'</span>, <span class="string">'\tau_6'</span>);
+		xlabel(<span class="string">'Tempo (s)'</span>);
+		ylim([-50, 50]);
+		xlim([0, 2.5]);
+		snapnow;
+
+		<span class="keyword">function</span> [tau] = torqFun1_5(~, t, q, qd)
+			tau = -(q-qRef)*Kp-qd*Kd;
+			tempos = [tempos t];
+			taus = [taus; tau];
+		<span class="keyword">end</span>
+	<span class="keyword">end</span>
+
+simulacao1_5([0,    0,     0, 0, 0, 0], [pi/2,  0, -pi/2,  pi,  pi/2, -pi]);
+simulacao1_5([0,   pi, -pi/2, 0, 0, 0],   [pi,  0,     0,  pi, -pi/2, 0]);
+simulacao1_5([0, pi/2, -pi/2, 0, 0, 0],  [-pi, pi,   -pi, -pi, -pi/2, pi]);
+</pre><img vspace="5" hspace="5" src="projeto_13.png" alt=""> <img vspace="5" hspace="5" src="projeto_14.png" alt=""> <img vspace="5" hspace="5" src="projeto_15.png" alt=""> <img vspace="5" hspace="5" src="projeto_16.png" alt=""> <img vspace="5" hspace="5" src="projeto_17.png" alt=""> <img vspace="5" hspace="5" src="projeto_18.png" alt=""> <pre class="codeinput"><span class="keyword">end</span>
+</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2012b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+function projeto(p560)
+
+qz = [0 0 0 0 0 0]; % zero angles, L shaped pose
+qr = [0 pi/2 -pi/2 0 0 0]; % ready pose, arm up
+qs = [0 0 -pi/2 0 0 0];
+robot = p560.nofriction();
+robot_no_friction = p560.nofriction('all');
+robot_no_gravity = SerialLink(robot);
+robot_no_gravity.gravity = [0; 0; 0];
+
+%% 1.3 - Simulação em malha aberta
+% Com torque pra compensar a gravidade
+
+	function simulacao1_3(q0)
+		tempo = 5;
+		tau = robot.rne([0, pi/2, -pi/2, 0, 0, 0], qz, qz);
+		torqFun = @(r, t, q, qd)tau;
+		[t, q] = robot.fdyn(tempo, torqFun, q0, qz);
+		plotAngles(t, q, ['q0 = ', mat2str(q0, 3)]);
+		snapnow;
+	end
+
+simulacao1_3([0,         0,     0, 0, 0, 0]);
+simulacao1_3([0,        pi, -pi/2, 0, 0, 0]);
+simulacao1_3([0,      pi/2, -pi/2, 0, 0, 0]);
+simulacao1_3([0, pi/2+0.05, -pi/2, 0, 0, 0]);
+
+%% 1.4.a - Simulação livre com atrito viscoso
+	function simulacao1_4(robot, q0)
+		tempo = 30;
+		[t, q, qd] = robot.fdyn(tempo, 0, q0, qz);
+		K = zeros(1, size(q, 1));
+		for i = 1:size(q, 1)
+			M = robot.inertia(q(i, :));
+			K(i) = 1/2*qd(i, :)*M*qd(i, :)';
+		end
+		plotAngles(t, q, ['q0 = ', mat2str(q0, 3)]);
+		snapnow;
+
+		plot(t, K);
+		title('Energia cinética');
+		xlabel('Tempo (s)');
+		ylabel('Energia (J)');
+		snapnow;
+	end
+
+simulacao1_4(robot, [0,    0, 0, 0, 0, 0]);
+simulacao1_4(robot, [0, 1e-6, 0, 0, 0, 0]);
+
+%% 1.4.b - Simulação livre com atrito viscoso
+simulacao1_4(robot_no_friction, [0,    0, 0, 0, 0, 0]);
+simulacao1_4(robot_no_friction, [0, 1e-6, 0, 0, 0, 0]);
+
+%% 1.5 - Simulação de controlador PD
+
+	function simulacao1_5(q0, qRef)
+		Kp = diag([50, 50, 50, 50, 50, 60]);
+		Kd = diag([20, 20, 20, 20, 20, 22]);
+		tempo = 5;
+		tempos = [];
+		taus = [];
+		[t, q] = robot_no_gravity.fdyn(tempo, @torqFun1_5, q0);
+		plotAngles(t, q, ['q^* = ', mat2str(qRef, 3)]);
+		snapnow;
+
+		plot(tempos, taus);
+		title(['q^* = ', mat2str(qRef, 3)]);
+		legend('\tau_1', '\tau_2', '\tau_3', '\tau_4', '\tau_5', '\tau_6');
+		xlabel('Tempo (s)');
+		ylim([-50, 50]);
+		xlim([0, 2.5]);
+		snapnow;
+
+		function [tau] = torqFun1_5(~, t, q, qd)
+			tau = -(q-qRef)*Kp-qd*Kd;
+			tempos = [tempos t];
+			taus = [taus; tau];
+		end
+	end
+
+simulacao1_5([0,    0,     0, 0, 0, 0], [pi/2,  0, -pi/2,  pi,  pi/2, -pi]);
+simulacao1_5([0,   pi, -pi/2, 0, 0, 0],   [pi,  0,     0,  pi, -pi/2, 0]);
+simulacao1_5([0, pi/2, -pi/2, 0, 0, 0],  [-pi, pi,   -pi, -pi, -pi/2, pi]);
+
+end
+##### SOURCE END #####
+--></body></html>
