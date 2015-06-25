@@ -1,2 +1,4 @@
 \select@language {brazil}
 \contentsline {section}{\numberline {1}Objetivo}{2}
+\contentsline {section}{\numberline {2}Din\^amica}{2}
+\contentsline {subsection}{\numberline {2.1}Simula\c c\~oes em malha aberta}{2}

@@ -87,8 +87,66 @@ Dr. Ely Carneiro Paiva
 
 \section{Dinâmica}
 \begin{par}
-	Para a modelagem dinâmica do robô seguiu-se o capítulo 6 da tese fornecida no roteiro do projeto, com a ressalva de ter-se evitado o uso do simulink, sendo ao invés feita a chamada do robô e montagem do sistema diretamente em código, que pode ser encontrado nos anexos. Após a montagem, foram feitos testes em malha aberta e análise do equilíbrio de energia cinética do robô.
+	Para a modelagem dinâmica do robô seguiu-se o capítulo 6 da tese fornecida no roteiro do projeto, com a ressalva de ter-se evitado o uso do simulink, sendo ao invés feita a chamada do robô e montagem do sistema diretamente em código, que pode ser encontrado nos anexos. Além disso, foi evitado o uso de atrito seco, que deixa as simulações muito lentas para o propósito desse relatório. Após a montagem, foram feitos testes em malha aberta e análise do equilíbrio de energia cinética do robô. 
 \end{par}
 
 \subsection{Simulações em malha aberta}
+\begin{par}
+As simulações em malha aberta foram feitas baseadas nos ângulos fornecidos pela tese. Para tal, foi primeiramente encontrado o torque necessário para manter o robô parado na posição final $q_f$, resistindo a força da gravidade. Então, o mesmo torque foi aplicado diretamente sobre o robô para assim observar se o robô se direciona até a posição final a partir de uma posição inicial. A posição final escolhida foi:
+\end{par}
+
+\begin{equation*}
+	q_f = [0, \pi/2, -\pi/2, 0, 0, 0]
+\end{equation*}
+
+E as posições iniciais simuladas foram, respectivamente:
+
+\begin{align*}
+	q_{0a} = & [ 0, 0 , 0, 0, 0, 0]\\
+	q_{0b} = & [ 0, \pi , -\pi/2, 0, 0, 0]\\
+	q_{0c} = & [ 0, \pi/2 , -\pi/2, 0, 0, 0]\\
+	q_{0d} = & [ 0, \pi/2+0.05 , -\pi/2, 0, 0, 0]
+\end{align*}
+
+\begin{par}
+Os respectivos movimentos estão demonstrados na figura \ref{fig:simAberta} abaixo. Observe que, nas figuras \ref{fig:simAberta01} \ref{fig:simAberta02} e \ref{fig:simAberta04}, a posição $q_2$(ou $q_f[2]$) não vai até a posição final $\pi/2$, indo ao invés para a posição $3\pi/2$. Ao verificar a posição do robô, notou-se que ela é equivalente a posição final do robô em $\pi/2$, podendo-se concluir de que não houve erros no fim para essa estabilização.
+\end{par}
+\begin{par}
+Observou-se também que houveram oscilações indesejáveis com a simulação em malha aberta, natural já que o sistema não possui uma realimentação.
+\end{par}
+
+
+\begin{figure}[H]
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=1.0\linewidth]{projeto_01.png}
+  \caption{Simulação para $q_{0a}$}
+  \label{fig:simAberta01}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=1.0\linewidth]{projeto_02.png}
+  \caption{Simulação para $q_{0b}$}
+  \label{fig:simAberta02}
+\end{subfigure}
+
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=1.0\linewidth]{projeto_03.png}
+  \caption{Simulação para $q_{0c}$}
+  \label{fig:simAberta03}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=1.0\linewidth]{projeto_04.png}
+  \caption{Simulação para $q_{0d}$}
+  \label{fig:simAberta04}
+\end{subfigure}
+
+\caption{Simulação em malha aberta para as respectivas condições iniciais com o torque para a condição final $q_f$ aplicado.}
+\label{fig:simAberta}
+\end{figure}
+
+\subsection{}
+
 \end{document}

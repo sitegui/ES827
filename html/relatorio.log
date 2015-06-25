@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.3.13)  25 JUN 2015 02:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.3.13)  25 JUN 2015 20:41
 entering extended mode
 **relatorio.tex
 (C:\Users\Augusto\Documents\GitHub\trabalho-Ely\html\relatorio.tex
@@ -262,7 +262,7 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-No file relatorio.aux.
+(C:\Users\Augusto\Documents\GitHub\trabalho-Ely\html\relatorio.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
@@ -275,6 +275,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
+
 ("e:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count107
@@ -296,10 +297,10 @@ Package caption Info: End \AtBeginDocument code.
 Non-PDF special ignored!
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-[2]
-No file relatorio.toc.
+[2] (C:\Users\Augusto\Documents\GitHub\trabalho-Ely\html\relatorio.toc)
 \tf@toc=\write4
-[1] <puma560.png, id=18, 529.98pt x 353.06906pt>
+
+[1] <puma560.png, id=19, 529.98pt x 353.06906pt>
 File: puma560.png Graphic file (type png)
  <use puma560.png>
 Package pdftex.def Info: puma560.png used on input line 84.
@@ -307,27 +308,64 @@ Package pdftex.def Info: puma560.png used on input line 84.
  [2
 
  <C:/Users/Augusto/Documents/GitHub/trabalho-Ely/html/puma560.png>]
+<projeto_01.png, id=30, 421.575pt x 316.18124pt>
+File: projeto_01.png Graphic file (type png)
+ <use projeto_01.png>
+Package pdftex.def Info: projeto_01.png used on input line 121.
+(pdftex.def)             Requested size: 234.8775pt x 176.1581pt.
+
+<projeto_02.png, id=31, 421.575pt x 316.18124pt>
+File: projeto_02.png Graphic file (type png)
+ <use projeto_02.png>
+Package pdftex.def Info: projeto_02.png used on input line 127.
+(pdftex.def)             Requested size: 234.8775pt x 176.1581pt.
+
+<projeto_03.png, id=32, 421.575pt x 316.18124pt>
+File: projeto_03.png Graphic file (type png)
+ <use projeto_03.png>
+Package pdftex.def Info: projeto_03.png used on input line 134.
+(pdftex.def)             Requested size: 234.8775pt x 176.1581pt.
+
+<projeto_04.png, id=33, 421.575pt x 316.18124pt>
+File: projeto_04.png Graphic file (type png)
+ <use projeto_04.png>
+Package pdftex.def Info: projeto_04.png used on input line 140.
+(pdftex.def)             Requested size: 234.8775pt x 176.1581pt.
+ [3 <C:/Users/Augusto/Documents/GitHub/trabalho-Ely/html/projeto_01.png (PNG co
+py)> <C:/Users/Augusto/Documents/GitHub/trabalho-Ely/html/projeto_02.png (PNG c
+opy)> <C:/Users/Augusto/Documents/GitHub/trabalho-Ely/html/projeto_03.png (PNG 
+copy)> <C:/Users/Augusto/Documents/GitHub/trabalho-Ely/html/projeto_04.png (PNG
+ copy)>]
 (C:\Users\Augusto\Documents\GitHub\trabalho-Ely\html\relatorio.aux) ) 
 Here is how much of TeX's memory you used:
- 4031 strings out of 493921
- 57892 string characters out of 3147276
- 118020 words of memory out of 3000000
- 7250 multiletter control sequences out of 15000+200000
- 13712 words of font info for 35 fonts, out of 3000000 for 9000
+ 4080 strings out of 493921
+ 58937 string characters out of 3147276
+ 121098 words of memory out of 3000000
+ 7288 multiletter control sequences out of 15000+200000
+ 17172 words of font info for 42 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 42i,6n,38p,340b,286s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,8n,38p,518b,499s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users
-\Augusto\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.p
+\Augusto\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.p
 k> <C:\Users\Augusto\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
-0\ecrm1200.pk> <C:\Users\Augusto\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
-pen\ec\dpi600\ecrm1440.pk> <C:\Users\Augusto\AppData\Local\MiKTeX\2.9\fonts\pk\
-ljfour\jknappen\ec\dpi600\ecti1440.pk> <C:\Users\Augusto\AppData\Local\MiKTeX\2
-.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk> <C:\Users\Augusto\AppData\Lo
-cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1200.pk> <C:\Users\August
-o\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc2074.pk>
-Output written on relatorio.pdf (4 pages, 160976 bytes).
+0\ecbx1440.pk> <C:\Users\Augusto\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
+pen\ec\dpi600\ecbx1200.pk> <C:\Users\Augusto\AppData\Local\MiKTeX\2.9\fonts\pk\
+ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\Augusto\AppData\Local\MiKTeX\2
+.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Augusto\AppData\Lo
+cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <C:\Users\August
+o\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1440.pk> <C:\
+Users\Augusto\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2
+488.pk> <C:\Users\Augusto\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\
+dpi600\eccc1200.pk> <C:\Users\Augusto\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\
+jknappen\ec\dpi600\eccc2074.pk><e:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmmi10.pfb><e:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmmi12.pfb><e:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi
+8.pfb><e:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><e:
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><e:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on relatorio.pdf (5 pages, 257920 bytes).
 PDF statistics:
- 218 PDF objects out of 1000 (max. 8388607)
+ 329 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
