@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+
+%% Escrevendo em portuguÃƒÂªs:
+\usepackage[brazil]{babel}
+\usepackage[latin1]{inputenc} 
+\usepackage[T1]{fontenc}
+\usepackage{psfrag}
+\usepackage{fullpage}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage{color}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[section]{placeins}
+\usepackage{float}
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+ 
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\textsc{\LARGE Universidade Estadual de Campinas}\\[0.5cm]
+\textsc{\normalsize ES827A - Robótica Industrial}\\[0.2cm] % Major heading such as course name
+\textsc{\normalsize Turma A}\\[0.2cm] % Minor heading such as course title
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+\vspace {5cm}
+{ \huge \bfseries Projeto Final - Dinâmica e cinemática do robô Puma560 }\\[0.4cm] % Title of your document
+ 
+%----------------------------------------------------------------------------------------
+%	AUTHOR SECTION
+%----------------------------------------------------------------------------------------
+\vspace {5cm}
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Alunos:}\\
+ \begin{tabbing}
+ Augusto Miranda Garcia\hspace{1cm} \=  \= 104627 \\
+ Guilherme de Oliveira Souza  \> 117093 \\
+ \end{tabbing}
+\end{flushleft}
+\end{minipage}
+\vspace {2cm}
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Professor responsável:} \\
+Dr. Ely Carneiro Paiva
+\end{flushright}
+\end{minipage}\\[2cm]
+
+{\large \today}\\[3cm] % Date, change the \today to a set date if you want to be precise
+
+\vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}
+
+
+
+\tableofcontents
+\clearpage
+
+\section{Objetivo}
+\begin{par}
+	O objetivo desse relatório é apresentar o desenvolvimento dos conceitos apresentados em aula de robótica industrial nas atividades propostas para o projeto, sendo então concluído com questões sobre o assunto desenvolvido. É utilizado para tal o Robotics Toolbox, sendo usado o robô Puma560, já incluído na toolbox.
+\end{par}
+
+\begin{figure}[H]
+\centering
+\includegraphics [width=4in]{puma560.png}
+\caption {Robô Puma560.}
+\end{figure}
+
+\section{Dinâmica}
+\begin{par}
+	Para a modelagem dinâmica do robô seguiu-se o capítulo 6 da tese fornecida no roteiro do projeto, com a ressalva de ter-se evitado o uso do simulink, sendo ao invés feita a chamada do robô e montagem do sistema diretamente em código, que pode ser encontrado nos anexos. Após a montagem, foram feitos testes em malha aberta e análise do equilíbrio de energia cinética do robô.
+\end{par}
+
+\subsection{Simulações em malha aberta}
+\end{document}
