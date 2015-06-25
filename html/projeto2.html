@@ -65,75 +65,105 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#3">Resulting robot movement</a></li></ul></div><pre class="codeinput"><span class="keyword">function</span> projeto2(p560)
+  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#3">2.2.a Desenho de elipse no ch&atilde;o do espa&ccedil;o de trabalho com o rob&ocirc; puma560</a></li><li><a href="#5">2.1.b Desenho de elipse na parede do espa&ccedil;o de trabalho com o rob&ocirc; puma560</a></li></ul></div><pre class="codeinput"><span class="keyword">function</span> projeto2(p560)
 </pre><pre class="codeinput">close <span class="string">all</span>;
 robot = p560.nofriction();
-
-n = 25;
+</pre><h2>2.2.a Desenho de elipse no ch&atilde;o do espa&ccedil;o de trabalho com o rob&ocirc; puma560<a name="3"></a></h2><pre class="codeinput">n = 25;
 r1 = 0.4;
 r2 = 0.75;
-z = -0.4;
+z = -0.35;
 angle = linspace(0, 2*pi, n)';
 points = [r1*cos(angle), r2*sin(angle), z*ones(n, 1)];
 T = transl(points);
 q = robot.ikine(T);
 
-figure;
-set(gcf, <span class="string">'Renderer'</span>, <span class="string">'zbuffer'</span>);
-robot.plot(q(1,:));
-hold(<span class="string">'on'</span>);
-frame = getframe(gcf);
-[im, map] = rgb2ind(frame.cdata, 256, <span class="string">'nodither'</span>);
-<span class="keyword">for</span> k = 1:size(q,1)
-	robot.plot(q(k, :));
- 	plot2(points(k, :), <span class="string">'r.'</span>);
-	frame = getframe(gcf);
-	im(:,:,1,k) = rgb2ind(frame.cdata, map, <span class="string">'nodither'</span>);
-<span class="keyword">end</span>
-imwrite(im, map, <span class="string">'html\gui.gif'</span>, <span class="string">'DelayTime'</span>, 0, <span class="string">'LoopCount'</span>, inf);
+<span class="comment">% figure;</span>
+<span class="comment">% set(gcf, 'Renderer', 'zbuffer');</span>
+<span class="comment">% robot.plot(q(1,:));</span>
+<span class="comment">% hold('on');</span>
+<span class="comment">% frame = getframe(gcf);</span>
+<span class="comment">%[im, map] = rgb2ind(frame.cdata, 256, 'nodither');</span>
+
+	<span class="keyword">function</span> plotFrame(n)
+		robot.plot(q(n, :));
+		hold(<span class="string">'on'</span>);
+		plot2(points(n, :), <span class="string">'r.'</span>);
+	<span class="keyword">end</span>
+
+plot2gif(size(q, 1), @plotFrame, <span class="string">'html\2.1.gif'</span>);
 </pre><pre class="codeoutput">Warning: Initial joint configuration results in a (near-)singular
 configuration, this may slow convergence 
 Warning: solution diverging at step 3, try reducing alpha 
-Warning: ikine: iteration limit 1000 exceeded (row 6), final err 0.000018 
-Warning: ikine: iteration limit 1000 exceeded (row 7), final err 0.000018 
-</pre><img vspace="5" hspace="5" src="projeto2_01.png" alt=""> <h2>Resulting robot movement<a name="3"></a></h2><p>
-<img src="gui.gif" alt="Elipse no chão para o robô Puma560." align = "middle" >
+Warning: ikine: iteration limit 1000 exceeded (row 8), final err 0.000017 
+Warning: solution diverging at step 48, try reducing alpha 
+</pre><img vspace="5" hspace="5" src="projeto2_01.png" alt=""> <p>
+<p align="center"><img src="2.1.gif" alt="Elipse no chão para o robô Puma560."></p>
+</p><h2>2.1.b Desenho de elipse na parede do espa&ccedil;o de trabalho com o rob&ocirc; puma560<a name="5"></a></h2><pre class="codeinput">n = 25;
+r1 = 0.2;
+r2 = 0.4;
+x = 0.6;
+angle = linspace(0, 2*pi, n)';
+points = [x*ones(n, 1), r2*sin(angle), r1*cos(angle)];
+T = transl(points);
+q = robot.ikine(T);
+
+plot2gif(size(q, 1), @plotFrame, <span class="string">'html\2.2.gif'</span>);
+</pre><pre class="codeoutput">Warning: Initial joint configuration results in a (near-)singular
+configuration, this may slow convergence 
+</pre><img vspace="5" hspace="5" src="projeto2_02.png" alt=""> <img vspace="5" hspace="5" src="projeto2_03.png" alt=""> <p>
+<p align="center"><img src="2.2.gif" alt="Elipse na parede para o robô Puma560."></p>
 </p><pre class="codeinput"><span class="keyword">end</span>
 </pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2012b</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 function projeto2(p560)
-
 close all;
 robot = p560.nofriction();
+
+%% 2.2.a Desenho de elipse no chão do espaço de trabalho com o robô puma560
 
 n = 25;
 r1 = 0.4;
 r2 = 0.75;
-z = -0.4;
+z = -0.35;
 angle = linspace(0, 2*pi, n)';
 points = [r1*cos(angle), r2*sin(angle), z*ones(n, 1)];
 T = transl(points);
 q = robot.ikine(T);
 
-figure;
-set(gcf, 'Renderer', 'zbuffer');
-robot.plot(q(1,:));
-hold('on');
-frame = getframe(gcf);
-[im, map] = rgb2ind(frame.cdata, 256, 'nodither');
-for k = 1:size(q,1)
-	robot.plot(q(k, :));
- 	plot2(points(k, :), 'r.');
-	frame = getframe(gcf);
-	im(:,:,1,k) = rgb2ind(frame.cdata, map, 'nodither');
-end
-imwrite(im, map, 'html\gui.gif', 'DelayTime', 0, 'LoopCount', inf);
+% figure;
+% set(gcf, 'Renderer', 'zbuffer');
+% robot.plot(q(1,:));
+% hold('on');
+% frame = getframe(gcf);
+%[im, map] = rgb2ind(frame.cdata, 256, 'nodither');
 
+	function plotFrame(n)
+		robot.plot(q(n, :));
+		hold('on');
+		plot2(points(n, :), 'r.');
+	end
 
-
-%% Resulting robot movement
+plot2gif(size(q, 1), @plotFrame, 'html\2.1.gif');
+%%
 % <html>
-% <img src="gui.gif" alt="Elipse no chão para o robô Puma560." align = "middle" > 
+% <p align="center"><img src="2.1.gif" alt="Elipse no chão para o robô Puma560."></p> 
+% </html>
+%
+
+%% 2.1.b Desenho de elipse na parede do espaço de trabalho com o robô puma560
+n = 25;
+r1 = 0.2;
+r2 = 0.4;
+x = 0.6;
+angle = linspace(0, 2*pi, n)';
+points = [x*ones(n, 1), r2*sin(angle), r1*cos(angle)];
+T = transl(points);
+q = robot.ikine(T);
+
+plot2gif(size(q, 1), @plotFrame, 'html\2.2.gif');
+%%
+% <html>
+% <p align="center"><img src="2.2.gif" alt="Elipse na parede para o robô Puma560."></p> 
 % </html>
 %
 
