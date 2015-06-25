@@ -12,6 +12,7 @@ points = [r1*cos(angle), r2*sin(angle), z*ones(n, 1)];
 T = transl(points);
 q = robot.ikine(T);
 
+<<<<<<< HEAD
 figure;
 set(gcf, 'Renderer', 'zbuffer');
 robot.plot(q(1,:));
@@ -33,5 +34,14 @@ imwrite(im, map, 'html\gui.gif', 'DelayTime', 0, 'LoopCount', inf);
 % <img src="gui.gif" alt="Elipse no chão para o robô Puma560." align = "middle" > 
 % </html>
 %
+=======
+	function plotFrame(n)
+		robot.plot(q(n, :));
+		hold('on');
+		plot2(points(n, :), 'r.');
+	end
+
+plot2gif(size(q, 1), @plotFrame, '2.1.gif');
+>>>>>>> da921992a96ed684429de7d40f5af96cb8060967
 
 end
