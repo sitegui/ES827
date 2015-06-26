@@ -249,5 +249,17 @@ Ao ser retirado o atrito do sistema, ele passa a se mover livremente, já que não
 \label{fig:simEnergia04}
 \end{figure}
 
+\subsection{Controle em malha fechada}
+\begin{par}
+	Para o controle em malha fechada, foi aplicado um controle PD com compensação a gravidade, como sugerido pela tese. Pode ser provado que, com a compensação da gravidade, pode-se tratar cada uma das juntas como um sistema SISO, e como tal cada uma das juntas recebe um controlador PD separadamente. Isso pode ser expresso como uma matriz diagonal das constantes de controle do sistema. 
+\end{par}
+
+\begin{par}
+	Para desenvolver o controle do robô, segue-se então o seguinte modelo, que já inclui a compensação da gravidade:
+\end{par}
+\begin{equation*}
+	M(q)\ddot{q}+C(q,\dot{q})\dot{q} = -K_p\tilde{q}-K_d\dot{q}
+\end{equation*}
+
 
 \end{document}
