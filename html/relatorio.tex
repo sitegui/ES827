@@ -1,6 +1,6 @@
 \documentclass[12pt]{article}
 
-%% Escrevendo em portuguÃƒÂªs:
+%% Escrevendo em português:
 \usepackage[brazil]{babel}
 \usepackage[latin1]{inputenc} 
 \usepackage[T1]{fontenc}
@@ -111,10 +111,6 @@ E as posições iniciais simuladas foram, respectivamente:
 \begin{par}
 Os respectivos movimentos estão demonstrados na figura \ref{fig:simAberta} abaixo. Observe que, nas figuras \ref{fig:simAberta01} \ref{fig:simAberta02} e \ref{fig:simAberta04}, a posição $q_2$(ou $q_f[2]$) não vai até a posição final $\pi/2$, indo ao invés para a posição $3\pi/2$. Ao verificar a posição do robô, notou-se que ela é equivalente a posição final do robô em $\pi/2$, podendo-se concluir de que não houve erros no fim para essa estabilização.
 \end{par}
-\begin{par}
-Observou-se também que houveram oscilações indesejáveis com a simulação em malha aberta, natural já que o sistema não possui uma realimentação.
-\end{par}
-
 
 \begin{figure}[H]
 \begin{subfigure}{.5\textwidth}
@@ -147,6 +143,111 @@ Observou-se também que houveram oscilações indesejáveis com a simulação em malha
 \label{fig:simAberta}
 \end{figure}
 
-\subsection{}
+\begin{par}
+Observou-se também que houveram oscilações indesejáveis com a simulação em malha aberta, natural já que o sistema não possui uma realimentação. Mas no fim, o robô aparenta ser estável em malha aberta.
+\end{par}
+
+
+\subsection{Simulações em malha aberta para análise da energia cinética}
+
+\begin{par}
+	Para efetuar-se a análise da variação de energia cinética do sistema, foi seguido o procedimento apresentado na tese. Inicialmente, o robô é colocado em suas condição inicial, sendo então solto e deixado balançando livremente. No caso, é esperado que ele tenha um comportamento parecido com o de um  pêndulo duplo, devido a suas características físicas. para este ensaio, foram estudadas duas variâncias no experimento, são elas uma variação da posição inicial e o experimento foi executado com e sem atrito viscoso. 
+\end{par}
+\begin{par}
+	Para gerar a curva da energia cinética é utilizada a equação a seguir: 	
+\end{par}
+\begin{equation*}
+	K = \frac{1}{2}\dot{q}^T M(q) \dot{q}
+\end{equation*}
+
+\begin{par}
+Note que a matriz de inércia varia, como esperado, de acordo com a posição espacial atual do robô. As curvas de posição e variação da energia cinética para cada um dos casos definidos podem ser observadas nas figuras \ref{fig:simEnergia01}, \ref{fig:simEnergia02}, \ref{fig:simEnergia03} e \ref{fig:simEnergia04}.
+\end{par}
+
+\begin{par}
+Ao se analisar as figuras \ref{fig:simEnergia01} e \ref{fig:simEnergia02}, pode-se notar que o robô cai ao repouso e rapidamente se estabiliza na posição com menos energia cinética possível (braços do robô para baixo). A estabilização ocorre rapidamente devido ao atrito viscoso, em menos de dez segundos, e nao notou-se diferenças visíveis para a pequena variação da posição inicial. Isso ocorre pois o sistema é simples, com poucos graus de liberdades para esse caso, e consequentemente não muito caótico.
+\end{par}
+
+\begin{figure}[H]
+
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=1.0\linewidth]{projeto_05.png}
+  \caption{Variação da posição}
+  \label{fig:simEnergia01a}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=1.0\linewidth]{projeto_06.png}
+  \caption{Variação da energia cinética}
+  \label{fig:simEnergia01b}
+\end{subfigure}
+
+\caption{Simulação com atrito viscoso para posição inicial $q_0 = [0, 0, 0, 0, 0, 0]$.}
+\label{fig:simEnergia01}
+\end{figure}
+
+\begin{figure}[H]
+
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=1.0\linewidth]{projeto_07.png}
+  \caption{Variação da posição}
+  \label{fig:simEnergia02a}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=1.0\linewidth]{projeto_08.png}
+\caption{Variação da energia cinética}
+  \label{fig:simEnergia02b}
+\end{subfigure}
+
+\caption{Simulação com atrito viscoso para posição inicial $q_0 = [0, 1e-6, 0, 0, 0, 0]$.}
+\label{fig:simEnergia02}
+\end{figure}
+
+\begin{par}
+Ao ser retirado o atrito do sistema, ele passa a se mover livremente, já que não há dissipação de energia, e fica oscilando entre seus graus de liberdade, como pode ser observado nas figuras \ref{fig:simEnergia03} e \ref{fig:simEnergia04}. A energia cinética, como esperado para esse caso, varia bastante. Também não se observou grandes mudanças com a pequena variação das condições iniciais neste caso.
+\end{par}
+
+
+\begin{figure}[H]
+
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=1.0\linewidth]{projeto_09.png}
+  \caption{Variação da posição}
+  \label{fig:simEnergia03a}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=1.0\linewidth]{projeto_10.png}
+  \caption{Variação da energia cinética}
+  \label{fig:simEnergia03b}
+\end{subfigure}
+
+\caption{Simulação sem atrito viscoso para posição inicial $q_0 = [0, 0, 0, 0, 0, 0]$.}
+\label{fig:simEnergia03}
+\end{figure}
+
+\begin{figure}[H]
+
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=1.0\linewidth]{projeto_11.png}
+  \caption{Variação da posição}
+  \label{fig:simEnergia04a}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=1.0\linewidth]{projeto_12.png}
+\caption{Variação da energia cinética}
+  \label{fig:simEnergia04b}
+\end{subfigure}
+
+\caption{Simulação com atrito viscoso para posição inicial $q_0 = [0, 1e-6, 0, 0, 0, 0]$.}
+\label{fig:simEnergia04}
+\end{figure}
+
 
 \end{document}
