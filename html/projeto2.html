@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>projeto2</title><meta name="generator" content="MATLAB 8.0"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2015-06-24"><meta name="DC.source" content="projeto2.m"><style type="text/css">
+      --><title>projeto2</title><meta name="generator" content="MATLAB 8.1"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2015-06-28"><meta name="DC.source" content="projeto2.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -65,107 +65,132 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#3">2.2.a Desenho de elipse no ch&atilde;o do espa&ccedil;o de trabalho com o rob&ocirc; puma560</a></li><li><a href="#5">2.1.b Desenho de elipse na parede do espa&ccedil;o de trabalho com o rob&ocirc; puma560</a></li></ul></div><pre class="codeinput"><span class="keyword">function</span> projeto2(p560)
+  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#3">2.2 Desenho de elipse no ch&atilde;o e na parede do espa&ccedil;o de trabalho com o rob&ocirc; puma560</a></li></ul></div><pre class="codeinput"><span class="keyword">function</span> projeto2(p560)
 </pre><pre class="codeinput">close <span class="string">all</span>;
 robot = p560.nofriction();
-</pre><h2>2.2.a Desenho de elipse no ch&atilde;o do espa&ccedil;o de trabalho com o rob&ocirc; puma560<a name="3"></a></h2><pre class="codeinput">n = 25;
-r1 = 0.4;
-r2 = 0.75;
-z = -0.35;
-angle = linspace(0, 2*pi, n)';
-points = [r1*cos(angle), r2*sin(angle), z*ones(n, 1)];
-T = transl(points);
-q = robot.ikine(T);
+</pre><h2>2.2 Desenho de elipse no ch&atilde;o e na parede do espa&ccedil;o de trabalho com o rob&ocirc; puma560<a name="3"></a></h2><pre class="codeinput"><span class="comment">% Primeira elipse</span>
+n1 = 50;
+rx = 0.5;
+ry = 0.7;
+z = -0.5;
+angle = linspace(0, 2*pi, n1)';
+points1 = [rx*cos(angle), ry*sin(angle), z*ones(n1, 1)];
+T1 = transl(points1);
 
-<span class="comment">% figure;</span>
-<span class="comment">% set(gcf, 'Renderer', 'zbuffer');</span>
-<span class="comment">% robot.plot(q(1,:));</span>
-<span class="comment">% hold('on');</span>
-<span class="comment">% frame = getframe(gcf);</span>
-<span class="comment">%[im, map] = rgb2ind(frame.cdata, 256, 'nodither');</span>
+<span class="comment">% Segunda elipse</span>
+n2 = 50;
+x = 0.5;
+ry = 0.5;
+rz = 0.25;
+angle = linspace(0, 2*pi, n2)';
+points2 = [x*ones(n2, 1), ry*sin(angle), rz*cos(angle)];
+T2 = transl(points2);
+
+<span class="comment">% Caminho entre as elipses</span>
+n12 = 20;
+T12 = ctraj(T1(:, :, end), T2(:, :, 1), n12);
+T = cat(3, T1, T12, T2);
+
+<span class="comment">% Rota&ccedil;&atilde;o final</span>
+n3 = 25;
+az = linspace(-37.5, -37.5+360, n3);
+
+q = robot.ikine(T);
 
 	<span class="keyword">function</span> plotFrame(n)
-		robot.plot(q(n, :));
-		hold(<span class="string">'on'</span>);
-		plot2(points(n, :), <span class="string">'r.'</span>);
+		<span class="keyword">if</span> n &lt;= n1+n12+n2
+			robot.plot(q(n, :), <span class="string">'workspace'</span>, [-0.5, 0.5, -0.75, 0.75, -0.5, 0.75]);
+		<span class="keyword">end</span>
+
+		<span class="keyword">if</span> n &lt;= n1
+			hold(<span class="string">'on'</span>);
+			plot2(points1(n, :), <span class="string">'r.'</span>);
+		<span class="keyword">elseif</span> n &lt;= n1+n12
+		<span class="keyword">elseif</span> n &lt;= n1+n12+n2
+			hold(<span class="string">'on'</span>);
+			plot2(points2(n-n1-n12, :), <span class="string">'r.'</span>);
+		<span class="keyword">else</span>
+			axis(<span class="string">'off'</span>);
+			view(az(n-n1-n12-n2), 30);
+		<span class="keyword">end</span>
 	<span class="keyword">end</span>
 
-plot2gif(size(q, 1), @plotFrame, <span class="string">'html\2.1.gif'</span>);
-</pre><pre class="codeoutput">Warning: Initial joint configuration results in a (near-)singular
-configuration, this may slow convergence 
+plot2gif(n1+n12+n2+n3, @plotFrame, <span class="string">'html/elipse.gif'</span>);
+close(<span class="string">'all'</span>);
+</pre><pre class="codeoutput">Warning: Initial joint configuration results in a (near-)singular configuration,
+this may slow convergence 
 Warning: solution diverging at step 3, try reducing alpha 
-Warning: ikine: iteration limit 1000 exceeded (row 8), final err 0.000017 
-Warning: solution diverging at step 48, try reducing alpha 
-</pre><img vspace="5" hspace="5" src="projeto2_01.png" alt=""> <p>
-<p align="center"><img src="2.1.gif" alt="Elipse no chão para o robô Puma560."></p>
-</p><h2>2.1.b Desenho de elipse na parede do espa&ccedil;o de trabalho com o rob&ocirc; puma560<a name="5"></a></h2><pre class="codeinput">n = 25;
-r1 = 0.2;
-r2 = 0.4;
-x = 0.6;
-angle = linspace(0, 2*pi, n)';
-points = [x*ones(n, 1), r2*sin(angle), r1*cos(angle)];
-T = transl(points);
-q = robot.ikine(T);
-
-plot2gif(size(q, 1), @plotFrame, <span class="string">'html\2.2.gif'</span>);
-</pre><pre class="codeoutput">Warning: Initial joint configuration results in a (near-)singular
-configuration, this may slow convergence 
-</pre><img vspace="5" hspace="5" src="projeto2_02.png" alt=""> <img vspace="5" hspace="5" src="projeto2_03.png" alt=""> <p>
-<p align="center"><img src="2.2.gif" alt="Elipse na parede para o robô Puma560."></p>
+Warning: ikine: iteration limit 1000 exceeded (row 11), final err 0.000008 
+Warning: ikine: iteration limit 1000 exceeded (row 12), final err 0.000007 
+Warning: ikine: iteration limit 1000 exceeded (row 13), final err 0.000007 
+Warning: solution diverging at step 150, try reducing alpha 
+</pre><p>
+<p align="center"><img src="elipse.gif" alt="Elipse no chão e na parede para o robô Puma560."></p>
 </p><pre class="codeinput"><span class="keyword">end</span>
-</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2012b</a><br></p></div><!--
+</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2013a</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 function projeto2(p560)
 close all;
 robot = p560.nofriction();
 
-%% 2.2.a Desenho de elipse no chão do espaço de trabalho com o robô puma560
+%% 2.2 Desenho de elipse no chão e na parede do espaço de trabalho com o robô puma560
 
-n = 25;
-r1 = 0.4;
-r2 = 0.75;
-z = -0.35;
-angle = linspace(0, 2*pi, n)';
-points = [r1*cos(angle), r2*sin(angle), z*ones(n, 1)];
-T = transl(points);
+% Primeira elipse
+n1 = 50;
+rx = 0.5;
+ry = 0.7;
+z = -0.5;
+angle = linspace(0, 2*pi, n1)';
+points1 = [rx*cos(angle), ry*sin(angle), z*ones(n1, 1)];
+T1 = transl(points1);
+
+% Segunda elipse
+n2 = 50;
+x = 0.5;
+ry = 0.5;
+rz = 0.25;
+angle = linspace(0, 2*pi, n2)';
+points2 = [x*ones(n2, 1), ry*sin(angle), rz*cos(angle)];
+T2 = transl(points2);
+
+% Caminho entre as elipses
+n12 = 20;
+T12 = ctraj(T1(:, :, end), T2(:, :, 1), n12);
+T = cat(3, T1, T12, T2);
+
+% Rotação final
+n3 = 25;
+az = linspace(-37.5, -37.5+360, n3);
+
 q = robot.ikine(T);
-
-% figure;
-% set(gcf, 'Renderer', 'zbuffer');
-% robot.plot(q(1,:));
-% hold('on');
-% frame = getframe(gcf);
-%[im, map] = rgb2ind(frame.cdata, 256, 'nodither');
 
 	function plotFrame(n)
-		robot.plot(q(n, :));
-		hold('on');
-		plot2(points(n, :), 'r.');
+		if n <= n1+n12+n2
+			robot.plot(q(n, :), 'workspace', [-0.5, 0.5, -0.75, 0.75, -0.5, 0.75]);
+		end
+		
+		if n <= n1
+			hold('on');
+			plot2(points1(n, :), 'r.');
+		elseif n <= n1+n12
+		elseif n <= n1+n12+n2
+			hold('on');
+			plot2(points2(n-n1-n12, :), 'r.');
+		else
+			axis('off');
+			view(az(n-n1-n12-n2), 30);
+		end
 	end
 
-plot2gif(size(q, 1), @plotFrame, 'html\2.1.gif');
-%%
-% <html>
-% <p align="center"><img src="2.1.gif" alt="Elipse no chão para o robô Puma560."></p> 
-% </html>
-%
+plot2gif(n1+n12+n2+n3, @plotFrame, 'html/elipse.gif');
+close('all');
 
-%% 2.1.b Desenho de elipse na parede do espaço de trabalho com o robô puma560
-n = 25;
-r1 = 0.2;
-r2 = 0.4;
-x = 0.6;
-angle = linspace(0, 2*pi, n)';
-points = [x*ones(n, 1), r2*sin(angle), r1*cos(angle)];
-T = transl(points);
-q = robot.ikine(T);
-
-plot2gif(size(q, 1), @plotFrame, 'html\2.2.gif');
 %%
+% 
 % <html>
-% <p align="center"><img src="2.2.gif" alt="Elipse na parede para o robô Puma560."></p> 
+% <p align="center"><img src="elipse.gif" alt="Elipse no chão e na parede para o robô Puma560."></p>
 % </html>
-%
+% 
 
 end
 ##### SOURCE END #####
