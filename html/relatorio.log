@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.3.13)  25 JUN 2015 23:09
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.3.13)  29 JUN 2015 11:01
 entering extended mode
 **relatorio.tex
 (C:\Users\Augusto\Documents\GitHub\trabalho-Ely\html\relatorio.tex
@@ -300,7 +300,7 @@ Non-PDF special ignored!
 [2] (C:\Users\Augusto\Documents\GitHub\trabalho-Ely\html\relatorio.toc)
 \tf@toc=\write4
 
-[1] <puma560.png, id=19, 529.98pt x 353.06906pt>
+[1] <puma560.png, id=18, 529.98pt x 353.06906pt>
 File: puma560.png Graphic file (type png)
  <use puma560.png>
 Package pdftex.def Info: puma560.png used on input line 84.
@@ -308,25 +308,25 @@ Package pdftex.def Info: puma560.png used on input line 84.
  [2
 
  <C:/Users/Augusto/Documents/GitHub/trabalho-Ely/html/puma560.png>]
-<projeto_01.png, id=30, 421.575pt x 316.18124pt>
+<projeto_01.png, id=29, 421.575pt x 316.18124pt>
 File: projeto_01.png Graphic file (type png)
  <use projeto_01.png>
 Package pdftex.def Info: projeto_01.png used on input line 118.
 (pdftex.def)             Requested size: 234.8775pt x 176.1581pt.
 
-<projeto_02.png, id=31, 421.575pt x 316.18124pt>
+<projeto_02.png, id=30, 421.575pt x 316.18124pt>
 File: projeto_02.png Graphic file (type png)
  <use projeto_02.png>
 Package pdftex.def Info: projeto_02.png used on input line 124.
 (pdftex.def)             Requested size: 234.8775pt x 176.1581pt.
 
-<projeto_03.png, id=32, 421.575pt x 316.18124pt>
+<projeto_03.png, id=31, 421.575pt x 316.18124pt>
 File: projeto_03.png Graphic file (type png)
  <use projeto_03.png>
 Package pdftex.def Info: projeto_03.png used on input line 131.
 (pdftex.def)             Requested size: 234.8775pt x 176.1581pt.
 
-<projeto_04.png, id=33, 421.575pt x 316.18124pt>
+<projeto_04.png, id=32, 421.575pt x 316.18124pt>
 File: projeto_04.png Graphic file (type png)
  <use projeto_04.png>
 Package pdftex.def Info: projeto_04.png used on input line 137.
@@ -336,13 +336,13 @@ py)> <C:/Users/Augusto/Documents/GitHub/trabalho-Ely/html/projeto_02.png (PNG c
 opy)> <C:/Users/Augusto/Documents/GitHub/trabalho-Ely/html/projeto_03.png (PNG 
 copy)> <C:/Users/Augusto/Documents/GitHub/trabalho-Ely/html/projeto_04.png (PNG
  copy)>]
-<projeto_05.png, id=40, 421.575pt x 316.18124pt>
+<projeto_05.png, id=39, 421.575pt x 316.18124pt>
 File: projeto_05.png Graphic file (type png)
  <use projeto_05.png>
 Package pdftex.def Info: projeto_05.png used on input line 175.
 (pdftex.def)             Requested size: 234.8775pt x 176.1581pt.
 
-<projeto_06.png, id=41, 421.575pt x 316.18124pt>
+<projeto_06.png, id=40, 421.575pt x 316.18124pt>
 File: projeto_06.png Graphic file (type png)
  <use projeto_06.png>
 Package pdftex.def Info: projeto_06.png used on input line 181.
@@ -352,13 +352,13 @@ Overfull \hbox (2.61047pt too wide) in paragraph at lines 173--185
 []$[]$ $[]$ 
  []
 
-<projeto_07.png, id=42, 421.575pt x 316.18124pt>
+<projeto_07.png, id=41, 421.575pt x 316.18124pt>
 File: projeto_07.png Graphic file (type png)
  <use projeto_07.png>
 Package pdftex.def Info: projeto_07.png used on input line 194.
 (pdftex.def)             Requested size: 234.8775pt x 176.1581pt.
 
-<projeto_08.png, id=43, 421.575pt x 316.18124pt>
+<projeto_08.png, id=42, 421.575pt x 316.18124pt>
 File: projeto_08.png Graphic file (type png)
  <use projeto_08.png>
 Package pdftex.def Info: projeto_08.png used on input line 200.
@@ -370,13 +370,13 @@ Overfull \hbox (2.61047pt too wide) in paragraph at lines 192--204
 
 [4 <C:/Users/Augusto/Documents/GitHub/trabalho-Ely/html/projeto_05.png (PNG cop
 y)> <C:/Users/Augusto/Documents/GitHub/trabalho-Ely/html/projeto_06.png (PNG co
-py)>] <projeto_09.png, id=47, 421.575pt x 316.18124pt>
+py)>] <projeto_09.png, id=46, 421.575pt x 316.18124pt>
 File: projeto_09.png Graphic file (type png)
  <use projeto_09.png>
 Package pdftex.def Info: projeto_09.png used on input line 218.
 (pdftex.def)             Requested size: 234.8775pt x 176.1581pt.
 
-<projeto_10.png, id=48, 421.575pt x 316.18124pt>
+<projeto_10.png, id=47, 421.575pt x 316.18124pt>
 File: projeto_10.png Graphic file (type png)
  <use projeto_10.png>
 Package pdftex.def Info: projeto_10.png used on input line 224.
@@ -386,13 +386,13 @@ Overfull \hbox (2.61047pt too wide) in paragraph at lines 216--228
 []$[]$ $[]$ 
  []
 
-<projeto_11.png, id=49, 421.575pt x 316.18124pt>
+<projeto_11.png, id=48, 421.575pt x 316.18124pt>
 File: projeto_11.png Graphic file (type png)
  <use projeto_11.png>
 Package pdftex.def Info: projeto_11.png used on input line 237.
 (pdftex.def)             Requested size: 234.8775pt x 176.1581pt.
 
-<projeto_12.png, id=50, 421.575pt x 316.18124pt>
+<projeto_12.png, id=49, 421.575pt x 316.18124pt>
 File: projeto_12.png Graphic file (type png)
  <use projeto_12.png>
 Package pdftex.def Info: projeto_12.png used on input line 243.
@@ -409,36 +409,108 @@ opy)> <C:/Users/Augusto/Documents/GitHub/trabalho-Ely/html/projeto_10.png (PNG
 copy)>] [6 <C:/Users/Augusto/Documents/GitHub/trabalho-Ely/html/projeto_11.png 
 (PNG copy)> <C:/Users/Augusto/Documents/GitHub/trabalho-Ely/html/projeto_12.png
  (PNG copy)>]
-(C:\Users\Augusto\Documents\GitHub\trabalho-Ely\html\relatorio.aux) ) 
+
+LaTeX Warning: Reference `' on page 7 undefined on input line 301.
+
+<projeto_13.png, id=58, 421.575pt x 316.18124pt>
+File: projeto_13.png Graphic file (type png)
+ <use projeto_13.png>
+Package pdftex.def Info: projeto_13.png used on input line 306.
+(pdftex.def)             Requested size: 234.8775pt x 176.1581pt.
+
+<projeto_14.png, id=59, 421.575pt x 316.18124pt>
+File: projeto_14.png Graphic file (type png)
+ <use projeto_14.png>
+Package pdftex.def Info: projeto_14.png used on input line 312.
+(pdftex.def)             Requested size: 234.8775pt x 176.1581pt.
+
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 304--316
+[]$[]$ $[]$ 
+ []
+
+<projeto_15.png, id=60, 421.575pt x 316.18124pt>
+File: projeto_15.png Graphic file (type png)
+ <use projeto_15.png>
+Package pdftex.def Info: projeto_15.png used on input line 333.
+(pdftex.def)             Requested size: 234.8775pt x 176.1581pt.
+
+<projeto_16.png, id=61, 421.575pt x 316.18124pt>
+File: projeto_16.png Graphic file (type png)
+ <use projeto_16.png>
+Package pdftex.def Info: projeto_16.png used on input line 339.
+(pdftex.def)             Requested size: 234.8775pt x 176.1581pt.
+
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 331--343
+[]$[]$ $[]$ 
+ []
+
+[7 <C:/Users/Augusto/Documents/GitHub/trabalho-Ely/html/projeto_13.png (PNG cop
+y)> <C:/Users/Augusto/Documents/GitHub/trabalho-Ely/html/projeto_14.png (PNG co
+py)>]
+File: projeto_15.png Graphic file (type png)
+ <use projeto_15.png>
+Package pdftex.def Info: projeto_15.png used on input line 360.
+(pdftex.def)             Requested size: 234.8775pt x 176.1581pt.
+File: projeto_16.png Graphic file (type png)
+ <use projeto_16.png>
+Package pdftex.def Info: projeto_16.png used on input line 366.
+(pdftex.def)             Requested size: 234.8775pt x 176.1581pt.
+
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 358--370
+[]$[]$ $[]$ 
+ []
+
+[8 <C:/Users/Augusto/Documents/GitHub/trabalho-Ely/html/projeto_15.png (PNG cop
+y)> <C:/Users/Augusto/Documents/GitHub/trabalho-Ely/html/projeto_16.png (PNG co
+py)>]
+
+LaTeX Warning: Reference `fig:trajetoria' on page 9 undefined on input line 382
+.
+
+<projeto2_01.png, id=69, 421.575pt x 316.18124pt>
+File: projeto2_01.png Graphic file (type png)
+ <use projeto2_01.png>
+Package pdftex.def Info: projeto2_01.png used on input line 400.
+(pdftex.def)             Requested size: 469.75502pt x 352.32101pt.
+
+[9] [10 <C:/Users/Augusto/Documents/GitHub/trabalho-Ely/html/projeto2_01.png (P
+NG copy)>] (C:\Users\Augusto\Documents\GitHub\trabalho-Ely\html\relatorio.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4140 strings out of 493921
- 60057 string characters out of 3147276
- 122266 words of memory out of 3000000
- 7340 multiletter control sequences out of 15000+200000
+ 4182 strings out of 493921
+ 60786 string characters out of 3147276
+ 125392 words of memory out of 3000000
+ 7377 multiletter control sequences out of 15000+200000
  17172 words of font info for 42 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 42i,8n,38p,542b,499s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users
-\Augusto\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.p
-k> <C:\Users\Augusto\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
-0\ecbx1440.pk> <C:\Users\Augusto\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
-pen\ec\dpi600\ecbx1200.pk> <C:\Users\Augusto\AppData\Local\MiKTeX\2.9\fonts\pk\
-ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\Augusto\AppData\Local\MiKTeX\2
-.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Augusto\AppData\Lo
-cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <C:\Users\August
-o\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1440.pk> <C:\
-Users\Augusto\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2
-488.pk> <C:\Users\Augusto\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\
-dpi600\eccc1200.pk> <C:\Users\Augusto\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\
-jknappen\ec\dpi600\eccc2074.pk><e:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmmi10.pfb><e:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmmi12.pfb><e:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi
-8.pfb><e:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><e:
-/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><e:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on relatorio.pdf (8 pages, 316913 bytes).
+ 42i,9n,38p,542b,499s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Augusto\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
+0\ecbx1200.pk> <C:\Users\Augusto\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
+pen\ec\dpi600\ecrm1095.pk> <C:\Users\Augusto\AppData\Local\MiKTeX\2.9\fonts\pk\
+ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\Augusto\AppData\Local\MiKTeX\2
+.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\Augusto\AppData\Lo
+cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\August
+o\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <C:\
+Users\Augusto\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1
+440.pk> <C:\Users\Augusto\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\
+dpi600\ecbx2488.pk> <C:\Users\Augusto\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\
+jknappen\ec\dpi600\eccc1200.pk> <C:\Users\Augusto\AppData\Local\MiKTeX\2.9\font
+s\pk\ljfour\jknappen\ec\dpi600\eccc2074.pk><e:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmex10.pfb><e:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmmi10.pfb><e:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmmi12.pfb><e:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmmi8.pfb><e:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb
+><e:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><e:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on relatorio.pdf (12 pages, 378151 bytes).
 PDF statistics:
- 373 PDF objects out of 1000 (max. 8388607)
+ 418 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 91 words of extra memory for PDF output out of 10000 (max. 10000000)
 

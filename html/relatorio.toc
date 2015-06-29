@@ -4,3 +4,8 @@
 \contentsline {subsection}{\numberline {2.1}Simula\c c\~oes em malha aberta}{2}
 \contentsline {subsection}{\numberline {2.2}Simula\c c\~oes em malha aberta para an\'alise da energia cin\'etica}{4}
 \contentsline {subsection}{\numberline {2.3}Controle em malha fechada}{6}
+\contentsline {subsubsection}{\numberline {2.3.1}Simula\c c\~ao 1}{7}
+\contentsline {subsubsection}{\numberline {2.3.2}Simula\c c\~ao 2}{7}
+\contentsline {subsubsection}{\numberline {2.3.3}Simula\c c\~ao 3}{8}
+\contentsline {subsubsection}{\numberline {2.3.4}Coment\'arios}{9}
+\contentsline {section}{\numberline {3}Cinem\'atica}{9}

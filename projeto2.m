@@ -45,6 +45,10 @@ q = robot.ikine(T);
 		elseif n <= n1+n12+n2
 			hold('on');
 			plot2(points2(n-n1-n12, :), 'r.');
+        elseif n == n1+n12+n2+1
+            snapnow;
+            axis('off');
+			view(az(n-n1-n12-n2), 30);
 		else
 			axis('off');
 			view(az(n-n1-n12-n2), 30);

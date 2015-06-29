@@ -261,5 +261,147 @@ Ao ser retirado o atrito do sistema, ele passa a se mover livremente, já que não
 	M(q)\ddot{q}+C(q,\dot{q})\dot{q} = -K_p\tilde{q}-K_d\dot{q}
 \end{equation*}
 
+\begin{par}
+	Foi então desenvolvido o código em Matlab respectivo a equação acima, e executada simulações de controle posicional para três posições diferentes, com diferentes configurações iniciais, apresentadas nas seções a seguir. O controlador PD utilizado foi o mesmo utilizado na tese, já que assim como apresentado não há a necessidade de ajustar seus valores, pois não são decisivos para manter o sistema assintoticamente estável. Os respectivos valores para as constantes estão apresentados a seguir.
+\end{par}
+
+
+\[
+K_p =
+\begin{pmatrix}
+50 &  0  & 0 & 0 & 0 & 0\\
+0 &  50  & 0 & 0 & 0 & 0\\
+0 &  0  & 50 & 0 & 0 & 0\\
+0 &  0  & 0 & 50 & 0 & 0\\
+0 &  0  & 0 & 0 & 50 & 0\\
+0 &  0  & 0 & 0 & 0 & 50
+\end{pmatrix}
+\]		
+
+\[
+K_d =
+\begin{pmatrix}
+20 &  0  & 0 & 0 & 0 & 0\\
+0 &  20  & 0 & 0 & 0 & 0\\
+0 &  0  & 20 & 0 & 0 & 0\\
+0 &  0  & 0 & 20 & 0 & 0\\
+0 &  0  & 0 & 0 & 20 & 0\\
+0 &  0  & 0 & 0 & 0 & 20
+\end{pmatrix}
+\]		
+
+\subsubsection{Simulação 1}
+
+\begin{align*}
+	q_{init} = & [ 0, 0 , 0, 0, 0, 0]^T\\
+	\dot{q}_{init} = & [ 0, 0 , 0, 0, 0, 0]^T\\
+	q_{ref} = & [ \pi/2, 0 , -\pi/2, \pi, \pi/2, -\pi]^T
+\end{align*}
+
+Os resultados da simulação podem ser vistos na figura \ref{}
+\begin{figure}[H]
+
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=1.0\linewidth]{projeto_13.png}
+  \caption{Resposta em malha fechada da posição, simulação 1}
+  \label{fig:simLoop01a}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=1.0\linewidth]{projeto_14.png}
+\caption{Sinal de controle (torque) em malha fechada, simulação 1}
+  \label{fig:simLoop01b}
+\end{subfigure}
+\caption{Respostas da simulação 1 em malha fechada.}
+\label{fig:simLoop01}
+\end{figure}
+
+\subsubsection{Simulação 2}
+
+\begin{align*}
+	q_{init} = & [ 0, \pi , \pi/2, 0, 0, 0]^T\\
+	\dot{q}_{init} = & [ 0, 0 , 0, 0, 0, 0]^T\\
+	q_{ref} = & [ \pi, 0 , 0, \pi, -\pi/2, 0]^T
+\end{align*}
+
+Os resultados da simulação podem ser vistos na figura \ref{fig:simLoop02}.
+\begin{figure}[H]
+
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=1.0\linewidth]{projeto_15.png}
+  \caption{Resposta em malha fechada da posição, simulação 2}
+  \label{fig:simLoop02a}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=1.0\linewidth]{projeto_16.png}
+\caption{Sinal de controle (torque) em malha fechada, simulação 2}
+  \label{fig:simLoop02b}
+\end{subfigure}
+\caption{Respostas da simulação 2 em malha fechada.}
+\label{fig:simLoop02}
+\end{figure}
+
+\subsubsection{Simulação 3}
+
+\begin{align*}
+	q_{init} = & [ 0, \pi/2 , -\pi/2, 0, 0, 0]^T\\
+	\dot{q}_{init} = & [ 0, 0 , 0, 0, 0, 0]^T\\
+	q_{ref} = & [ -\pi, \pi , -\pi, -\pi, -\pi/2, \pi]^T
+\end{align*}
+
+Os resultados da simulação podem ser vistos na figura \ref{fig:simLoop03}.
+\begin{figure}[H]
+
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=1.0\linewidth]{projeto_15.png}
+  \caption{Resposta em malha fechada da posição, simulação 3}
+  \label{fig:simLoop03a}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=1.0\linewidth]{projeto_16.png}
+\caption{Sinal de controle (torque) em malha fechada, simulação 3}
+  \label{fig:simLoop03b}
+\end{subfigure}
+\caption{Respostas da simulação 3 em malha fechada.}
+\label{fig:simLoop03}
+\end{figure}
+
+\subsubsection{Comentários}
+\begin{par}
+	Todas as referências passadas foram seguidas em menos de 2.5 segundos. A estabilidade assintótica também é visível, e pode-se observar que não há oscilações, que são normalmente indesejadas ao se trabalhar com robôs em geral. Como a compensação à gravidade já está incluída na equação correspondente, o torque tende a zero após chegar a posição correta.
+\end{par}
+
+\section{Cinemática}
+
+\begin{par}
+	Foi feita uma simulação em Matlab em que o robô desenha duas elipses, uma no plano XY e outra no plano ZY. As coordenadas desenhadas estão apresentadas a seguir. O movimento resultante do robô pode ser visto na simulação mandada em anexo a esse relatório. A trajetória final seguida pode ser vista na figura \ref{fig:trajetoria}
+\end{par}
+
+\begin{gather*}
+	r_x = 0.5\\
+	r_y = 0.7\\
+	z = -0.5\\
+	Elipse_1 = [r_x * cos(\theta), r_y * sin(\theta), z]
+\end{gather*}
+
+\begin{gather*}
+	x = 0.5\\
+	r_y = 0.5\\
+	r_z = 0.25\\
+	Elipse_2 = [x , r_y * sin(\theta), r_z * cos(\theta)]
+\end{gather*}
+
+\begin{figure}[H]
+  \includegraphics[width=1.0\linewidth]{projeto2_01.png}
+  \caption{Trajetória das elipses seguidas pelo robô.}
+  \label{fig:trajetoria}
+
+\end{figure}
+
 
 \end{document}
