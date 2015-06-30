@@ -274,7 +274,7 @@ K_p =
 0 &  0  & 50 & 0 & 0 & 0\\
 0 &  0  & 0 & 50 & 0 & 0\\
 0 &  0  & 0 & 0 & 50 & 0\\
-0 &  0  & 0 & 0 & 0 & 50
+0 &  0  & 0 & 0 & 0 & 60
 \end{pmatrix}
 \]		
 
@@ -286,7 +286,7 @@ K_d =
 0 &  0  & 20 & 0 & 0 & 0\\
 0 &  0  & 0 & 20 & 0 & 0\\
 0 &  0  & 0 & 0 & 20 & 0\\
-0 &  0  & 0 & 0 & 0 & 20
+0 &  0  & 0 & 0 & 0 & 22
 \end{pmatrix}
 \]		
 
@@ -298,7 +298,7 @@ K_d =
 	q_{ref} = & [ \pi/2, 0 , -\pi/2, \pi, \pi/2, -\pi]^T
 \end{align*}
 
-Os resultados da simulação podem ser vistos na figura \ref{}
+Os resultados da simulação podem ser vistos na figura \ref{fig:simLoop01}.
 \begin{figure}[H]
 
 \begin{subfigure}{.5\textwidth}
@@ -379,7 +379,7 @@ Os resultados da simulação podem ser vistos na figura \ref{fig:simLoop03}.
 \section{Cinemática}
 
 \begin{par}
-	Foi feita uma simulação em Matlab em que o robô desenha duas elipses, uma no plano XY e outra no plano ZY. As coordenadas desenhadas estão apresentadas a seguir. O movimento resultante do robô pode ser visto na simulação mandada em anexo a esse relatório. A trajetória final seguida pode ser vista na figura \ref{fig:trajetoria}
+	Foi feita uma simulação em Matlab em que o robô desenha duas elipses, uma no plano XY e outra no plano ZY. As coordenadas desenhadas estão apresentadas a seguir. O movimento resultante do robô pode ser visto na simulação mandada em anexo a esse relatório. A trajetória final seguida pode ser vista na figura \ref{fig:trajetoria}.
 \end{par}
 
 \begin{gather*}
@@ -403,5 +403,112 @@ Os resultados da simulação podem ser vistos na figura \ref{fig:simLoop03}.
 
 \end{figure}
 
+\section{Questões}
+
+\subsection*{Questão 1}
+
+\begin{par}
+	\textbf{Q}: Por que no item 1.5 acima, os torques finais obtidos são nulos? O torque final não deveria ser igual ao torque de compensação da força da gravidade?
+\end{par}
+
+\vspace{0.6cm}
+
+\begin{par}
+	\textbf{R}: No item 1.5 a gravidade foi desconsiderada e, por isso, o torque final obtido é nulo, já que no estado final não há gravidade a ser compensada.
+\end{par}
+
+\subsection*{Questão 2}
+
+\begin{par}
+	\textbf{Q}: No item 1.4 foi indicado um comando Matlab para se obter a matriz de massa/inércia no espaço das juntas $M(q)$. Como você faria para obter essa matriz de massa utilizando  o método de Newton-Euler além de manipulação simbólica? Veja os apêndices B e C da mesma tese acima. Essa matriz corresponde a matriz $M(q)$ da equação geral da dinâmica de um robô, como dado abaixo, onde $\tau$ é o vetor de torques nas juntas.
+\end{par}
+
+\begin{align*}
+\tau = M(q) \ddot{q} + C(q, \dot{q}) \dot{q} + g(q)
+\end{align*}
+
+\vspace{0.6cm}
+
+\begin{par}
+	\textbf{R}: Usando o método de Newton-Euler, é possível obter $\tau$ em função dos parâmetros cinéticos do robô:
+\end{par}
+
+\begin{align*}
+\tau(\ddot{q}, \dot{q}, q)
+\end{align*}
+
+\begin{par}
+	Com isso, fixando um valor $q$ qualquer, fazendo $\dot{q} = \vec{0}$, $\ddot{q} = \left[\begin{matrix}1 & 0 & \dots & 0 \end{matrix}\right]^T$ e substituindo a expresão de $\tau$ na equação geral da dinâmica, chega-se em:
+\end{par}
+
+\begin{align*}
+\tau(\ddot{q}, \vec{0}, q) &= M(q) \ddot{q} + C(q, \vec{0}) \vec{0} + g(q)
+\end{align*}
+
+\begin{align*}
+\left[\begin{matrix}\tau_1 \\ \tau_2 \\ \vdots \\ \tau_N\end{matrix}\right] = 
+\left[\begin{matrix}M_{11} \\ M_{21} \\ \vdots \\ M_{N1}\end{matrix}\right] +
+\left[\begin{matrix}g_1 \\ g_2 \\ \vdots \\ g_N\end{matrix}\right]
+\end{align*}
+
+\begin{par}
+com $\tau_i$ e $g_i$ conhecidos. Desse modo, pode-se obter os valores de $M_{i1}$. Usando o mesmo processo para $\ddot{q} = \left[\begin{matrix}0 & 1 & 0 & \dots & 0 \end{matrix}\right]^T$, obtém-se os valores de $M_{i2}$. Assim, repetindo o processo para todas as $N$ colunas, consegue-se deduzir todos os elementos da matriz $M_{N \times N}$.
+\end{par}
+
+\subsection*{Questão 3}
+
+\begin{par}
+	\textbf{Q}: Por que é que essa matriz de massa $M(q)$ não é do tipo da matriz de massa abaixo de um corpo rígido, que é uma matriz 6x6 com uma matriz diagonal $M$ e outra matriz de inércia do corpo $J$?
+\end{par}
+
+\[
+\bar{M} =
+\begin{pmatrix}
+M & 0 \\
+0 & J
+\end{pmatrix}
+\]
+
+\vspace{0.6cm}
+
+\begin{par}
+	\textbf{R}: Como o robô não se trata de um corpo rígido, mas sim de um corpo com várias partes móveis ligadas através de juntas, a matriz $M$ não apresenta o mesmo formato observado no caso de corpos rígidos.
+	Os elementos $M_{ij}$ fora da diagonal representam as inércias de acoplamento, que relacionam a aceleração na junta $i$ com o torque na junta $j$.
+\end{par}
+
+\begin{par}
+	O efeito descrito no parágrafo anterior é representado na equação geral da dinâmica do robô:
+\end{par}
+
+\begin{align*}
+\tau = M(q) \ddot{q} + C(q, \dot{q}) \dot{q} + g(q)
+\end{align*}
+
+\begin{par}
+	Levando em consideração somente o efeito no torque devido às acelerações das juntas:
+\end{par}
+
+\begin{align*}
+\left[\begin{matrix}\tau_1 \\ \tau_2 \\ \vdots \\ \tau_N\end{matrix}\right] = 
+\left[\begin{matrix}M_{11} & M_{12} & \dots & M_{1N} \\
+	M_{21} & M_{22} & \dots & M_{2N} \\
+	\vdots & \vdots & \ddots & \vdots \\
+	M_{N1} & M_{N2} & \dots & M_{NN}\end{matrix}\right] \cdot
+\left[\begin{matrix}\ddot{q_1} \\ \ddot{q_2} \\ \vdots \\ \ddot{q_N}\end{matrix}\right]
+\end{align*}
+
+\begin{par}
+	Pode-se perceber que o efeito da $i$-ésima junta nos torques é dado por:
+\end{par}
+
+\begin{align*}
+\left[\begin{matrix}\tau_1 \\ \tau_2 \\ \vdots \\ \tau_N\end{matrix}\right] = 
+\left[\begin{matrix}M_{1i} \\ M_{2i} \\ \vdots \\ M_{Ni}\end{matrix}\right] \cdot
+\ddot{q_i}
+\end{align*}
+
+\begin{par}
+	O elemento $M_{ii}$ representa a inércia no atuador da junta $i$; os outros  representam o efeito do torque das juntas na aceleração da $i$-ésima junta.
+\end{par}
 
 \end{document}

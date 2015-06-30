@@ -1,7 +1,10 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.3.13)  29 JUN 2015 11:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.3.15)  29 JUN 2015 20:50
 entering extended mode
-**relatorio.tex
-(C:\Users\Augusto\Documents\GitHub\trabalho-Ely\html\relatorio.tex
+**C:/Users/Guilherme/Documents/Unicamp/9semestre/ES827/PROJETO_Final/html/relat
+orio.tex
+
+(C:/Users/Guilherme/Documents/Unicamp/9semestre/ES827/PROJETO_Final/html/relato
+rio.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -13,9 +16,9 @@ german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
-("e:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-("e:\Program Files\MiKTeX 2.9\tex\latex\base\size12.clo"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size12.clo"
 File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -30,19 +33,19 @@ File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("e:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
 Package: babel 2008/07/08 v3.8m The Babel package
 
 *************************************
 * Local config file bblopts.cfg used
 *
-("e:\Program Files\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
 File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
 )
-("e:\Program Files\MiKTeX 2.9\tex\generic\babel\portuges.ldf"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\portuges.ldf"
 Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
 
-("e:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
 File: babel.def 2008/07/08 v3.8m Babel common definitions
 \babel@savecnt=\count87
 \U@D=\dimen103
@@ -50,42 +53,42 @@ File: babel.def 2008/07/08 v3.8m Babel common definitions
 \l@brazil = a dialect from \language\l@portuges 
 Package babel Info: Making " an active character on input line 145.
 ))
-("e:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 
-("e:\Program Files\MiKTeX 2.9\tex\latex\base\latin1.def"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\latin1.def"
 File: latin1.def 2008/03/30 v1.1d Input encoding file
 ))
-("e:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-("e:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.def"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.def"
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ))
-("e:\Program Files\MiKTeX 2.9\tex\latex\psfrag\psfrag.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psfrag\psfrag.sty"
 Package: psfrag 1998/04/11 v3.04 PSfrag (MCG)
 
-("e:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-("e:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("e:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-("e:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("e:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("e:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count88
@@ -94,50 +97,50 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \pfg@scount=\count90
 \pfg@temp=\write3
 )
-("e:\Program Files\MiKTeX 2.9\tex\latex\preprint\fullpage.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\preprint\fullpage.sty"
 Package: fullpage 1999/02/23 1.1 (PWD)
 \FP@margin=\skip43
 )
-("e:\Program Files\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-("e:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-("e:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks16
 )
 \Gin@req@height=\dimen104
 \Gin@req@width=\dimen105
 )
-("e:\Program Files\MiKTeX 2.9\tex\latex\graphics\epsfig.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\epsfig.sty"
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
 \epsfxsize=\dimen106
 \epsfysize=\dimen107
 )
-("e:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.sty"
 Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
 
-("e:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-("e:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
 Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 
-("e:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
 Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
 ))
-("e:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 
-("e:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
 Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
 
-("e:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 
-("e:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -146,11 +149,11 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
-("e:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-("e:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
@@ -164,18 +167,18 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 ))
-("e:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\color.sty"
 Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
-("e:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 130.
 )
-("e:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption.sty"
 Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
-("e:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption3.sty"
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
 \captionmargin=\dimen108
@@ -188,15 +191,15 @@ Package caption3 Info: TeX engine: e-TeX on input line 57.
 )
 \c@ContinuedFloat=\count91
 )
-("e:\Program Files\MiKTeX 2.9\tex\latex\caption\subcaption.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\subcaption.sty"
 Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
 \c@subfigure=\count92
 \c@subtable=\count93
 )
-("e:\Program Files\MiKTeX 2.9\tex\latex\placeins\placeins.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\placeins\placeins.sty"
 Package: placeins 2005/04/18  v 2.2
 )
-("e:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count94
 \float@exts=\toks17
@@ -204,24 +207,24 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks18
 \@floatcapt=\box27
 )
-("e:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip44
 
 For additional information on amsmath, use the `?' option.
-("e:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01
 
-("e:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks19
 \ex@=\dimen115
 ))
-("e:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen116
 )
-("e:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count95
@@ -262,7 +265,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-(C:\Users\Augusto\Documents\GitHub\trabalho-Ely\html\relatorio.aux)
+(C:\Users\Guilherme\Documents\Unicamp\9semestre\ES827\PROJETO_Final\html\relato
+rio.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
@@ -275,8 +279,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
-
-("e:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count107
 \scratchdimen=\dimen124
@@ -296,55 +299,58 @@ Package caption Info: End \AtBeginDocument code.
  [1
 Non-PDF special ignored!
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-[2] (C:\Users\Augusto\Documents\GitHub\trabalho-Ely\html\relatorio.toc)
+{C:/Users/Guilherme/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
+(C:\Users\Guilherme\Documents\Unicamp\9semestre\ES827\PROJETO_Final\html\relato
+rio.toc)
 \tf@toc=\write4
-
-[1] <puma560.png, id=18, 529.98pt x 353.06906pt>
+ [1] <puma560.png, id=19, 529.98pt x 353.06906pt>
 File: puma560.png Graphic file (type png)
  <use puma560.png>
 Package pdftex.def Info: puma560.png used on input line 84.
 (pdftex.def)             Requested size: 289.07999pt x 192.58313pt.
- [2
 
- <C:/Users/Augusto/Documents/GitHub/trabalho-Ely/html/puma560.png>]
-<projeto_01.png, id=29, 421.575pt x 316.18124pt>
+[2
+
+ <C:/Users/Guilherme/Documents/Unicamp/9semestre/ES827/PROJETO_Final/html/puma5
+60.png>] <projeto_01.png, id=30, 421.575pt x 316.18124pt>
 File: projeto_01.png Graphic file (type png)
- <use projeto_01.png>
+
+<use projeto_01.png>
 Package pdftex.def Info: projeto_01.png used on input line 118.
 (pdftex.def)             Requested size: 234.8775pt x 176.1581pt.
-
-<projeto_02.png, id=30, 421.575pt x 316.18124pt>
+ <projeto_02.png, id=31, 421.575pt x 316.18124pt>
 File: projeto_02.png Graphic file (type png)
- <use projeto_02.png>
+
+<use projeto_02.png>
 Package pdftex.def Info: projeto_02.png used on input line 124.
 (pdftex.def)             Requested size: 234.8775pt x 176.1581pt.
-
-<projeto_03.png, id=31, 421.575pt x 316.18124pt>
+ <projeto_03.png, id=32, 421.575pt x 316.18124pt>
 File: projeto_03.png Graphic file (type png)
- <use projeto_03.png>
+
+<use projeto_03.png>
 Package pdftex.def Info: projeto_03.png used on input line 131.
 (pdftex.def)             Requested size: 234.8775pt x 176.1581pt.
-
-<projeto_04.png, id=32, 421.575pt x 316.18124pt>
+ <projeto_04.png, id=33, 421.575pt x 316.18124pt>
 File: projeto_04.png Graphic file (type png)
- <use projeto_04.png>
+
+<use projeto_04.png>
 Package pdftex.def Info: projeto_04.png used on input line 137.
 (pdftex.def)             Requested size: 234.8775pt x 176.1581pt.
- [3 <C:/Users/Augusto/Documents/GitHub/trabalho-Ely/html/projeto_01.png (PNG co
-py)> <C:/Users/Augusto/Documents/GitHub/trabalho-Ely/html/projeto_02.png (PNG c
-opy)> <C:/Users/Augusto/Documents/GitHub/trabalho-Ely/html/projeto_03.png (PNG 
-copy)> <C:/Users/Augusto/Documents/GitHub/trabalho-Ely/html/projeto_04.png (PNG
- copy)>]
-<projeto_05.png, id=39, 421.575pt x 316.18124pt>
+ [3 <C:/Users/Guilherme/Documents/Unicamp/9semestre/ES827/PROJETO_Final/html/pr
+ojeto_01.png (PNG copy)> <C:/Users/Guilherme/Documents/Unicamp/9semestre/ES827/
+PROJETO_Final/html/projeto_02.png (PNG copy)> <C:/Users/Guilherme/Documents/Uni
+camp/9semestre/ES827/PROJETO_Final/html/projeto_03.png (PNG copy)> <C:/Users/Gu
+ilherme/Documents/Unicamp/9semestre/ES827/PROJETO_Final/html/projeto_04.png (PN
+G copy)>] <projeto_05.png, id=40, 421.575pt x 316.18124pt>
 File: projeto_05.png Graphic file (type png)
- <use projeto_05.png>
+
+<use projeto_05.png>
 Package pdftex.def Info: projeto_05.png used on input line 175.
 (pdftex.def)             Requested size: 234.8775pt x 176.1581pt.
-
-<projeto_06.png, id=40, 421.575pt x 316.18124pt>
+ <projeto_06.png, id=41, 421.575pt x 316.18124pt>
 File: projeto_06.png Graphic file (type png)
- <use projeto_06.png>
+
+<use projeto_06.png>
 Package pdftex.def Info: projeto_06.png used on input line 181.
 (pdftex.def)             Requested size: 234.8775pt x 176.1581pt.
 
@@ -352,13 +358,13 @@ Overfull \hbox (2.61047pt too wide) in paragraph at lines 173--185
 []$[]$ $[]$ 
  []
 
-<projeto_07.png, id=41, 421.575pt x 316.18124pt>
+<projeto_07.png, id=42, 421.575pt x 316.18124pt>
 File: projeto_07.png Graphic file (type png)
  <use projeto_07.png>
 Package pdftex.def Info: projeto_07.png used on input line 194.
 (pdftex.def)             Requested size: 234.8775pt x 176.1581pt.
 
-<projeto_08.png, id=42, 421.575pt x 316.18124pt>
+<projeto_08.png, id=43, 421.575pt x 316.18124pt>
 File: projeto_08.png Graphic file (type png)
  <use projeto_08.png>
 Package pdftex.def Info: projeto_08.png used on input line 200.
@@ -368,15 +374,16 @@ Overfull \hbox (2.61047pt too wide) in paragraph at lines 192--204
 []$[]$ $[]$ 
  []
 
-[4 <C:/Users/Augusto/Documents/GitHub/trabalho-Ely/html/projeto_05.png (PNG cop
-y)> <C:/Users/Augusto/Documents/GitHub/trabalho-Ely/html/projeto_06.png (PNG co
-py)>] <projeto_09.png, id=46, 421.575pt x 316.18124pt>
+[4 <C:/Users/Guilherme/Documents/Unicamp/9semestre/ES827/PROJETO_Final/html/pro
+jeto_05.png (PNG copy)> <C:/Users/Guilherme/Documents/Unicamp/9semestre/ES827/P
+ROJETO_Final/html/projeto_06.png (PNG copy)>]
+<projeto_09.png, id=47, 421.575pt x 316.18124pt>
 File: projeto_09.png Graphic file (type png)
  <use projeto_09.png>
 Package pdftex.def Info: projeto_09.png used on input line 218.
 (pdftex.def)             Requested size: 234.8775pt x 176.1581pt.
 
-<projeto_10.png, id=47, 421.575pt x 316.18124pt>
+<projeto_10.png, id=48, 421.575pt x 316.18124pt>
 File: projeto_10.png Graphic file (type png)
  <use projeto_10.png>
 Package pdftex.def Info: projeto_10.png used on input line 224.
@@ -386,13 +393,13 @@ Overfull \hbox (2.61047pt too wide) in paragraph at lines 216--228
 []$[]$ $[]$ 
  []
 
-<projeto_11.png, id=48, 421.575pt x 316.18124pt>
+<projeto_11.png, id=49, 421.575pt x 316.18124pt>
 File: projeto_11.png Graphic file (type png)
  <use projeto_11.png>
 Package pdftex.def Info: projeto_11.png used on input line 237.
 (pdftex.def)             Requested size: 234.8775pt x 176.1581pt.
 
-<projeto_12.png, id=49, 421.575pt x 316.18124pt>
+<projeto_12.png, id=50, 421.575pt x 316.18124pt>
 File: projeto_12.png Graphic file (type png)
  <use projeto_12.png>
 Package pdftex.def Info: projeto_12.png used on input line 243.
@@ -402,23 +409,21 @@ Overfull \hbox (2.61047pt too wide) in paragraph at lines 235--247
 []$[]$ $[]$ 
  []
 
-[5 <C:/Users/Augusto/Documents/GitHub/trabalho-Ely/html/projeto_07.png (PNG cop
-y)> <C:/Users/Augusto/Documents/GitHub/trabalho-Ely/html/projeto_08.png (PNG co
-py)> <C:/Users/Augusto/Documents/GitHub/trabalho-Ely/html/projeto_09.png (PNG c
-opy)> <C:/Users/Augusto/Documents/GitHub/trabalho-Ely/html/projeto_10.png (PNG 
-copy)>] [6 <C:/Users/Augusto/Documents/GitHub/trabalho-Ely/html/projeto_11.png 
-(PNG copy)> <C:/Users/Augusto/Documents/GitHub/trabalho-Ely/html/projeto_12.png
- (PNG copy)>]
-
-LaTeX Warning: Reference `' on page 7 undefined on input line 301.
-
-<projeto_13.png, id=58, 421.575pt x 316.18124pt>
+[5 <C:/Users/Guilherme/Documents/Unicamp/9semestre/ES827/PROJETO_Final/html/pro
+jeto_07.png (PNG copy)> <C:/Users/Guilherme/Documents/Unicamp/9semestre/ES827/P
+ROJETO_Final/html/projeto_08.png (PNG copy)> <C:/Users/Guilherme/Documents/Unic
+amp/9semestre/ES827/PROJETO_Final/html/projeto_09.png (PNG copy)> <C:/Users/Gui
+lherme/Documents/Unicamp/9semestre/ES827/PROJETO_Final/html/projeto_10.png (PNG
+ copy)>] [6 <C:/Users/Guilherme/Documents/Unicamp/9semestre/ES827/PROJETO_Final
+/html/projeto_11.png (PNG copy)> <C:/Users/Guilherme/Documents/Unicamp/9semestr
+e/ES827/PROJETO_Final/html/projeto_12.png (PNG copy)>]
+<projeto_13.png, id=59, 421.575pt x 316.18124pt>
 File: projeto_13.png Graphic file (type png)
  <use projeto_13.png>
 Package pdftex.def Info: projeto_13.png used on input line 306.
 (pdftex.def)             Requested size: 234.8775pt x 176.1581pt.
 
-<projeto_14.png, id=59, 421.575pt x 316.18124pt>
+<projeto_14.png, id=60, 421.575pt x 316.18124pt>
 File: projeto_14.png Graphic file (type png)
  <use projeto_14.png>
 Package pdftex.def Info: projeto_14.png used on input line 312.
@@ -428,13 +433,13 @@ Overfull \hbox (2.61047pt too wide) in paragraph at lines 304--316
 []$[]$ $[]$ 
  []
 
-<projeto_15.png, id=60, 421.575pt x 316.18124pt>
+<projeto_15.png, id=61, 421.575pt x 316.18124pt>
 File: projeto_15.png Graphic file (type png)
  <use projeto_15.png>
 Package pdftex.def Info: projeto_15.png used on input line 333.
 (pdftex.def)             Requested size: 234.8775pt x 176.1581pt.
 
-<projeto_16.png, id=61, 421.575pt x 316.18124pt>
+<projeto_16.png, id=62, 421.575pt x 316.18124pt>
 File: projeto_16.png Graphic file (type png)
  <use projeto_16.png>
 Package pdftex.def Info: projeto_16.png used on input line 339.
@@ -444,15 +449,16 @@ Overfull \hbox (2.61047pt too wide) in paragraph at lines 331--343
 []$[]$ $[]$ 
  []
 
-[7 <C:/Users/Augusto/Documents/GitHub/trabalho-Ely/html/projeto_13.png (PNG cop
-y)> <C:/Users/Augusto/Documents/GitHub/trabalho-Ely/html/projeto_14.png (PNG co
-py)>]
+[7 <C:/Users/Guilherme/Documents/Unicamp/9semestre/ES827/PROJETO_Final/html/pro
+jeto_13.png (PNG copy)> <C:/Users/Guilherme/Documents/Unicamp/9semestre/ES827/P
+ROJETO_Final/html/projeto_14.png (PNG copy)>]
 File: projeto_15.png Graphic file (type png)
  <use projeto_15.png>
 Package pdftex.def Info: projeto_15.png used on input line 360.
 (pdftex.def)             Requested size: 234.8775pt x 176.1581pt.
 File: projeto_16.png Graphic file (type png)
- <use projeto_16.png>
+
+<use projeto_16.png>
 Package pdftex.def Info: projeto_16.png used on input line 366.
 (pdftex.def)             Requested size: 234.8775pt x 176.1581pt.
 
@@ -460,57 +466,50 @@ Overfull \hbox (2.61047pt too wide) in paragraph at lines 358--370
 []$[]$ $[]$ 
  []
 
-[8 <C:/Users/Augusto/Documents/GitHub/trabalho-Ely/html/projeto_15.png (PNG cop
-y)> <C:/Users/Augusto/Documents/GitHub/trabalho-Ely/html/projeto_16.png (PNG co
-py)>]
-
-LaTeX Warning: Reference `fig:trajetoria' on page 9 undefined on input line 382
-.
-
+[8 <C:/Users/Guilherme/Documents/Unicamp/9semestre/ES827/PROJETO_Final/html/pro
+jeto_15.png (PNG copy)> <C:/Users/Guilherme/Documents/Unicamp/9semestre/ES827/P
+ROJETO_Final/html/projeto_16.png (PNG copy)>]
 <projeto2_01.png, id=69, 421.575pt x 316.18124pt>
 File: projeto2_01.png Graphic file (type png)
  <use projeto2_01.png>
 Package pdftex.def Info: projeto2_01.png used on input line 400.
 (pdftex.def)             Requested size: 469.75502pt x 352.32101pt.
 
-[9] [10 <C:/Users/Augusto/Documents/GitHub/trabalho-Ely/html/projeto2_01.png (P
-NG copy)>] (C:\Users\Augusto\Documents\GitHub\trabalho-Ely\html\relatorio.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+[9] [10 <C:/Users/Guilherme/Documents/Unicamp/9semestre/ES827/PROJETO_Final/htm
+l/projeto2_01.png (PNG copy)>] [11] [12]
+(C:\Users\Guilherme\Documents\Unicamp\9semestre\ES827\PROJETO_Final\html\relato
+rio.aux) ) 
 Here is how much of TeX's memory you used:
- 4182 strings out of 493921
- 60786 string characters out of 3147276
- 125392 words of memory out of 3000000
- 7377 multiletter control sequences out of 15000+200000
+ 4181 strings out of 493921
+ 61576 string characters out of 3144864
+ 125402 words of memory out of 3000000
+ 7376 multiletter control sequences out of 15000+200000
  17172 words of font info for 42 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 42i,9n,38p,542b,499s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Augusto\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
-0\ecbx1200.pk> <C:\Users\Augusto\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
-pen\ec\dpi600\ecrm1095.pk> <C:\Users\Augusto\AppData\Local\MiKTeX\2.9\fonts\pk\
-ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\Augusto\AppData\Local\MiKTeX\2
-.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\Augusto\AppData\Lo
-cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\August
-o\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <C:\
-Users\Augusto\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1
-440.pk> <C:\Users\Augusto\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\
-dpi600\ecbx2488.pk> <C:\Users\Augusto\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\
-jknappen\ec\dpi600\eccc1200.pk> <C:\Users\Augusto\AppData\Local\MiKTeX\2.9\font
-s\pk\ljfour\jknappen\ec\dpi600\eccc2074.pk><e:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmex10.pfb><e:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmmi10.pfb><e:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmmi12.pfb><e:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmmi8.pfb><e:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb
-><e:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><e:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on relatorio.pdf (12 pages, 378151 bytes).
+ 42i,16n,38p,614b,499s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Guilherme\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
+n\ec\dpi600\ecrm1095.pk> <C:\Users\Guilherme\AppData\Local\MiKTeX\2.9\fonts\pk\
+ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\Guilherme\AppData\Local\MiKTeX
+\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Guilherme\AppDat
+a\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\Gu
+ilherme\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk
+> <C:\Users\Guilherme\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi6
+00\ecrm1440.pk> <C:\Users\Guilherme\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
+nappen\ec\dpi600\ecti1440.pk> <C:\Users\Guilherme\AppData\Local\MiKTeX\2.9\font
+s\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk> <C:\Users\Guilherme\AppData\Local\M
+iKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1200.pk> <C:\Users\Guilherme\A
+ppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc2074.pk><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x
+86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on relatorio.pdf (14 pages, 404246 bytes).
 PDF statistics:
- 418 PDF objects out of 1000 (max. 8388607)
+ 454 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  91 words of extra memory for PDF output out of 10000 (max. 10000000)
 
